@@ -1,0 +1,8 @@
+V3 4
+FL "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" 2016/12/19.12:19:32 P.20131013
+EN work/top 1482146440 \
+      FL "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 1482146441 \
+      FL "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" \
+      EN work/top 1482146440 CP fft

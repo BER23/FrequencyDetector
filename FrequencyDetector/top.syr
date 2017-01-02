@@ -1,0 +1,360 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3498 - No primary, secondary unit in the file "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/ipcore_dir/fft.vhd. Ignore this file from project file "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top_vhdl.prj".
+Compiling vhdl file "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" in Library work.
+Entity <top> compiled.
+Entity <top> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:2211 - "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" line 52: Instantiating black box module <fft>.
+Entity <top> analyzed. Unit <top> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <top>.
+    Related source file is "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd".
+WARNING:Xst:653 - Signal <xn_re> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+WARNING:Xst:646 - Signal <xn_index> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <xn_im> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+WARNING:Xst:646 - Signal <xk_re> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <xk_index> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <xk_im> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <start> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <scale_sch_we> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <scale_sch> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000.
+WARNING:Xst:646 - Signal <rfd> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <fwd_inv_we> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <fwd_inv> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <edone> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dv> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <done> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <clk> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <busy> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/fft.ngc>.
+Reading Secure Unit <blk00000045>.
+Loading core <fft> for timing and area information for instance <your_instance_name>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 58.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 0
+
+Cell Usage :
+# BELS                             : 4412
+#      GND                         : 7
+#      INV                         : 196
+#      LUT1                        : 340
+#      LUT2                        : 395
+#      LUT2_D                      : 7
+#      LUT2_L                      : 2
+#      LUT3                        : 525
+#      LUT4                        : 847
+#      LUT4_L                      : 1
+#      MUXCY                       : 919
+#      MUXF5                       : 408
+#      VCC                         : 4
+#      XORCY                       : 761
+# FlipFlops/Latches                : 2974
+#      FD                          : 488
+#      FDE                         : 1266
+#      FDR                         : 20
+#      FDRE                        : 1199
+#      FDS                         : 1
+# RAMS                             : 3
+#      RAMB16_S18_S18              : 1
+#      RAMB16_S36_S36              : 2
+# Shift Registers                  : 148
+#      SRL16                       : 7
+#      SRL16E                      : 141
+# MULTs                            : 16
+#      MULT18X18SIO                : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     2723  out of   4656    58%  
+ Number of Slice Flip Flops:           2974  out of   9312    31%  
+ Number of 4 input LUTs:               2461  out of   9312    26%  
+    Number used as logic:              2313
+    Number used as Shift registers:     148
+ Number of IOs:                           0
+ Number of bonded IOBs:                   0  out of    232     0%  
+ Number of BRAMs:                         3  out of     20    15%  
+ Number of MULT18X18SIOs:                16  out of     20    80%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                           | Load  |
+-----------------------------------+-------------------------------------------------+-------+
+N0                                 | NONE(your_instance_name/blk00000001/blk00000004)| 5051  |
+-----------------------------------+-------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.152ns (Maximum Frequency: 162.549MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'N0'
+  Clock period: 6.152ns (frequency: 162.549MHz)
+  Total number of paths / destination ports: 51472 / 5834
+-------------------------------------------------------------------------
+Delay:               6.152ns (Levels of Logic = 19)
+  Source:            your_instance_name/blk00000001/blk00002751/blk00002758 (FF)
+  Destination:       your_instance_name/blk00000001/blk000020e9 (FF)
+  Source Clock:      N0 rising
+  Destination Clock: N0 rising
+
+  Data Path: your_instance_name/blk00000001/blk00002751/blk00002758 to your_instance_name/blk00000001/blk000020e9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              24   0.591   1.252  blk00002758 (COSINE<1>)
+     end scope: 'blk00002751'
+     INV:I->O              1   0.704   0.000  blk00002d87 (sig00001ccd)
+     MUXCY:S->O            1   0.464   0.000  blk000020fa (sig00001cce)
+     MUXCY:CI->O           1   0.059   0.000  blk000020fc (sig00001ccf)
+     MUXCY:CI->O           1   0.059   0.000  blk000020fe (sig00001cd0)
+     MUXCY:CI->O           1   0.059   0.000  blk00002100 (sig00001cd1)
+     MUXCY:CI->O           1   0.059   0.000  blk00002102 (sig00001cd2)
+     MUXCY:CI->O           1   0.059   0.000  blk00002104 (sig00001cd3)
+     MUXCY:CI->O           1   0.059   0.000  blk00002106 (sig00001cd5)
+     MUXCY:CI->O           1   0.059   0.000  blk00002108 (sig00001cd6)
+     MUXCY:CI->O           1   0.059   0.000  blk0000210a (sig00001cd8)
+     MUXCY:CI->O           1   0.059   0.000  blk0000210c (sig00001cd9)
+     MUXCY:CI->O           1   0.059   0.000  blk0000210e (sig00001cdb)
+     MUXCY:CI->O           1   0.059   0.000  blk00002110 (sig00001cdd)
+     MUXCY:CI->O           1   0.059   0.000  blk00002112 (sig00001cde)
+     MUXCY:CI->O           1   0.059   0.000  blk00002114 (sig00001ce0)
+     MUXCY:CI->O           0   0.059   0.000  blk00002116 (sig00001ce2)
+     XORCY:CI->O           1   0.804   0.499  blk00002118 (sig00001c8d)
+     LUT2:I1->O            1   0.704   0.000  blk00002a2f (sig00001c9d)
+     FDE:D                     0.308          blk000020f9
+    ----------------------------------------
+    Total                      6.152ns (4.401ns logic, 1.751ns route)
+                                       (71.5% logic, 28.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 20.28 secs
+ 
+--> 
+
+Total memory usage is 335300 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

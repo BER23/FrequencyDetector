@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.xst" -ofn "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.syr" 
