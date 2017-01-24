@@ -1,4 +1,19 @@
-V3 4
+V3 11
+FL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/complex_package.vhd 2017/01/24.16:08:37 P.20131013
+PH work/complex_package 1485271226 \
+      FL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/complex_package.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+PB work/complex_package 1485271227 \
+      FL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/complex_package.vhd \
+      PH work/complex_package 1485271226
+FL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd 2017/01/24.15:52:07 P.20131013
+EN work/sdft 1485269555 \
+      FL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd \
+      LB IEEE_PROPOSED PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB work/complex_package 1485271227 PH IEEE_PROPOSED/FIXED_PKG 0
+AR work/sdft/Behavioral 1485269556 \
+      FL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd \
+      EN work/sdft 1485269555
 FL "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" 2017/01/23.10:08:49 P.20131013
 EN work/top 1485162532 \
       FL "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" \

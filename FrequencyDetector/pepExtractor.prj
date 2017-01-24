@@ -1,1 +1,2 @@
-work	"dcm.vhd"
+work	"complex_package.vhd"
+work	"sdft.vhd"

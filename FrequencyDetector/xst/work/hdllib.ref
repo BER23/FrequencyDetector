@@ -1,2 +1,6 @@
+PB complex_package complex_package C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/complex_package.vhd sub00/vhpl03 1485271227
+PH complex_package NULL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/complex_package.vhd sub00/vhpl02 1485271226
 EN top NULL "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" sub00/vhpl00 1485162532
+AR sdft behavioral C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd sub00/vhpl05 1485269556
+EN sdft NULL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd sub00/vhpl04 1485269555
 AR top behavioral "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" sub00/vhpl01 1485162533

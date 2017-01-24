@@ -8,39 +8,38 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector
-Edcm
-Z1 w1485162946
-Z2 DPx6 unisim 11 vcomponents 0 22 2L_N91<XgM:Bh8=P>9OR]0
-Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-R0
-Z6 8dcm.vhd
-Z7 Fdcm.vhd
+Pcomplex_package
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 w1485270517
+Z5 dC:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector
+Z6 8complex_package.vhd
+Z7 Fcomplex_package.vhd
 l0
-L30
-V<VRmU:kBIMJ;ho3lGDUkd1
-!s100 PSc=k9kI8N2=^GL8Bc`J:1
+L5
+VEVZGLi`JWg8E0170J^X1e1
+!s100 =f2^3>_S`BG@a55IQMAe?1
 Z8 OP;C;10.4a;61
 31
-Z9 !s110 1485172381
+b1
+Z9 !s110 1485271153
 !i10b 1
-Z10 !s108 1485172380.000000
-Z11 !s90 -reportprogress|300|-explicit|-93|dcm.vhd|
-Z12 !s107 dcm.vhd|
+Z10 !s108 1485271153.000000
+Z11 !s90 -reportprogress|300|-explicit|-93|complex_package.vhd|
+Z12 !s107 complex_package.vhd|
 !i113 1
 Z13 o-explicit -93 -O0
 Z14 tExplicit 1
-Abehavioral
+Bbody
+Z15 DPx4 work 15 complex_package 0 22 EVZGLi`JWg8E0170J^X1e1
+R1
 R2
 R3
-R4
-R5
-DEx4 work 3 dcm 0 22 <VRmU:kBIMJ;ho3lGDUkd1
-l44
-L38
-VG^J<WD:=45TCX0GjLeS?o1
-!s100 c]VBTJ[M2^bCM^T3oI?o73
+l0
+L14
+V@d:LZH`[?^Vn7D5dEzSo_2
+!s100 :OC1Gm7CR:I_PJGCPQ3Mf3
 R8
 31
 R9
@@ -51,38 +50,82 @@ R12
 !i113 1
 R13
 R14
-Efft
-Z15 w1483378208
-Z16 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z17 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z18 DPx6 unisim 4 vpkg 0 22 =E=Qil`0j3PcWN;Gd1E>l3
+nbody
+Edcm
+Z16 w1485162946
+Z17 DPx6 unisim 11 vcomponents 0 22 2L_N91<XgM:Bh8=P>9OR]0
+R1
 R2
-R4
-R5
+R3
 R0
-Z19 8ipcore_dir/fft.vhd
-Z20 Fipcore_dir/fft.vhd
+Z18 8dcm.vhd
+Z19 Fdcm.vhd
+l0
+L30
+V<VRmU:kBIMJ;ho3lGDUkd1
+!s100 PSc=k9kI8N2=^GL8Bc`J:1
+R8
+31
+Z20 !s110 1485172381
+!i10b 1
+Z21 !s108 1485172380.000000
+Z22 !s90 -reportprogress|300|-explicit|-93|dcm.vhd|
+Z23 !s107 dcm.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R17
+R1
+R2
+R3
+DEx4 work 3 dcm 0 22 <VRmU:kBIMJ;ho3lGDUkd1
+l44
+L38
+VG^J<WD:=45TCX0GjLeS?o1
+!s100 c]VBTJ[M2^bCM^T3oI?o73
+R8
+31
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R13
+R14
+Efft
+Z24 w1483378208
+Z25 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z26 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z27 DPx6 unisim 4 vpkg 0 22 =E=Qil`0j3PcWN;Gd1E>l3
+R17
+R2
+R3
+R0
+Z28 8ipcore_dir/fft.vhd
+Z29 Fipcore_dir/fft.vhd
 l0
 L43
 VEMa4lPbDW8a?37GAjIARW0
 !s100 J5IWEkAQ<InceUc01c?Tc1
 R8
 31
-Z21 !s110 1485172380
+Z30 !s110 1485172380
 !i10b 1
-R10
-Z22 !s90 -reportprogress|300|-explicit|-93|ipcore_dir/fft.vhd|
-Z23 !s107 ipcore_dir/fft.vhd|
+R21
+Z31 !s90 -reportprogress|300|-explicit|-93|ipcore_dir/fft.vhd|
+Z32 !s107 ipcore_dir/fft.vhd|
 !i113 1
 R13
 R14
 Astructure
-R16
+R25
+R26
+R27
 R17
-R18
 R2
-R4
-R5
+R3
 DEx4 work 3 fft 0 22 EMa4lPbDW8a?37GAjIARW0
 l3116
 L65
@@ -90,94 +133,182 @@ VXiRifG3g@ac2NM5DNe[Uh1
 !s100 GXAQiogB542baz^W>0W_z2
 R8
 31
+R30
+!i10b 1
 R21
+R31
+R32
+!i113 1
+R13
+R14
+Esdft
+Z33 w1485271135
+R15
+Z34 DPx4 ieee 17 fixed_float_types 0 22 JoVc:0L4XeXcaE?c:FVe62
+Z35 DPx4 ieee 17 fixed_generic_pkg 0 22 `=cI_4Mf07Y0RE[dTgE=F2
+Z36 DPx4 ieee 9 fixed_pkg 0 22 6nURH]dUY5@T6S0eLDXJe2
+R1
+R2
+R3
+R5
+Z37 8sdft.vhd
+Z38 Fsdft.vhd
+l0
+L7
+VN`PYnY0n?Z9SQfHVX0mzP2
+!s100 oV;L@N_`7WnJFe4>lWnFK2
+R8
+31
+R9
 !i10b 1
 R10
-R22
-R23
+Z39 !s90 -reportprogress|300|-explicit|-93|sdft.vhd|
+Z40 !s107 sdft.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R15
+R34
+R35
+R36
+R1
+R2
+R3
+DEx4 work 4 sdft 0 22 N`PYnY0n?Z9SQfHVX0mzP2
+l25
+L17
+VG1UB;?@BgkMjNHCcb:Ac[2
+!s100 L?Q<N7W8bIhJ_=?g;UE:<0
+R8
+31
+R9
+!i10b 1
+R10
+R39
+R40
+!i113 1
+R13
+R14
+Esdft_tb
+Z41 w1485269652
+R2
+R3
+R5
+Z42 8sdft_tb.vhd
+Z43 Fsdft_tb.vhd
+l0
+L4
+VjHmTZO<jH1XObRfT;o9aF0
+!s100 UmhBhz[8NAbinTY==kGjQ1
+R8
+31
+Z44 !s110 1485271154
+!i10b 1
+R10
+Z45 !s90 -reportprogress|300|-explicit|-93|sdft_tb.vhd|
+Z46 !s107 sdft_tb.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R2
+R3
+Z47 DEx4 work 7 sdft_tb 0 22 jHmTZO<jH1XObRfT;o9aF0
+l36
+L7
+Z48 VF13XlmGz9[]GTBR5EMn4a1
+Z49 !s100 jj=WS4j`:NZB:^Gd^X5RA0
+R8
+31
+R44
+!i10b 1
+R10
+R45
+R46
 !i113 1
 R13
 R14
 Etop
-Z24 w1485170945
-R4
-R5
+Z50 w1485170945
+R2
+R3
 R0
-Z25 8top.vhd
-Z26 Ftop.vhd
+Z51 8top.vhd
+Z52 Ftop.vhd
 l0
 L5
 VMB<4gP_XVVU@[cUObL3V:3
 !s100 231HT22feX@jKQ>jLLQ4C2
 R8
 31
-R9
+R20
 !i10b 1
-Z27 !s108 1485172381.000000
-Z28 !s90 -reportprogress|300|-explicit|-93|top.vhd|
-Z29 !s107 top.vhd|
+Z53 !s108 1485172381.000000
+Z54 !s90 -reportprogress|300|-explicit|-93|top.vhd|
+Z55 !s107 top.vhd|
 !i113 1
 R13
 R14
 Abehavioral
-R4
-R5
-Z30 DEx4 work 3 top 0 22 MB<4gP_XVVU@[cUObL3V:3
+R2
+R3
+Z56 DEx4 work 3 top 0 22 MB<4gP_XVVU@[cUObL3V:3
 l66
 L22
 V=;966:QKJ2JR>hWbOZGDo0
 !s100 95zzNoGQlUJJo9Xi4L<e_1
 R8
 31
-R9
+R20
 !i10b 1
-R27
-R28
-R29
+R53
+R54
+R55
 !i113 1
 R13
 R14
 Etop_tb
-Z31 w1485171132
-Z32 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z57 w1485171132
+Z58 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R1
+R2
 R3
-R4
-R5
 R0
-Z33 8top_tb.vhd
-Z34 Ftop_tb.vhd
+Z59 8top_tb.vhd
+Z60 Ftop_tb.vhd
 l0
 L7
 V4NB8cTPC^b[eG]BKz<eK;1
 !s100 6IJLg7QbEfENfEif2a3080
 R8
 31
-R9
+R20
 !i10b 1
-R27
-Z35 !s90 -reportprogress|300|-explicit|-93|top_tb.vhd|
-Z36 !s107 top_tb.vhd|
+R53
+Z61 !s90 -reportprogress|300|-explicit|-93|top_tb.vhd|
+Z62 !s107 top_tb.vhd|
 !i113 1
 R13
 R14
 Abehav
-R30
-R32
+R56
+R58
+R1
+R2
 R3
-R4
-R5
-Z37 DEx4 work 6 top_tb 0 22 4NB8cTPC^b[eG]BKz<eK;1
+DEx4 work 6 top_tb 0 22 4NB8cTPC^b[eG]BKz<eK;1
 l24
 L10
-Z38 V0[NPQ^;k_mURDjBXF1=KV2
-Z39 !s100 I52ondlnOl0`iz[nPNaaL2
+V0[NPQ^;k_mURDjBXF1=KV2
+!s100 I52ondlnOl0`iz[nPNaaL2
 R8
 31
-R9
+R20
 !i10b 1
-R27
-R35
-R36
+R53
+R61
+R62
 !i113 1
 R13
 R14

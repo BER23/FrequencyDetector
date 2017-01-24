@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.xst" -ofn "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc3s500e-fg320-4 sdft.ngc sdft.ngd  
+xst -intstyle ise -ifn "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.xst" -ofn "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.syr" 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.xst" -ofn "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.syr" 

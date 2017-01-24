@@ -5,44 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLParsers" num="3498" delta="old" >No primary, secondary unit in the file &quot;<arg fmt="%s" index="1">C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/ipcore_dir/fft.vhd</arg>. Ignore this file from project file &quot;<arg fmt="%s" index="2">C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top_vhdl.prj</arg>&quot;.
+<msg type="error" file="HDLParsers" num="3317" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd</arg>&quot; Line <arg fmt="%d" index="2">2</arg>.  Library <arg fmt="%s" index="3">IEEE_PROPOSED</arg> cannot be found.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd</arg>&quot; line <arg fmt="%d" index="2">54</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fft</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">xn_index</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">xk_re</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">xk_index</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">xk_im</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">rfd</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">edone</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">dv</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">done</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">busy</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">blk00000039</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">blk00000038</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="error" file="HDLParsers" num="3013" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd</arg>&quot; Line <arg fmt="%d" index="2">6</arg>. Library <arg fmt="%s" index="3">IEEE_PROPOSED</arg> is not declared.
 </msg>
 
 </messages>

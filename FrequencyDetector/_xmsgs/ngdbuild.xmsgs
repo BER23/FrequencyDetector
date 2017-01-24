@@ -5,124 +5,71 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000806</arg>&apos; has unconnected output pin
+<msg type="warning" file="NgdBuild" num="578" delta="new" >Design contains no instances.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000807</arg>&apos; has unconnected output pin
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches&lt;0&gt;&quot;  LOC = &quot;L13&quot;;&gt; [top.ucf(1)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches&lt;0&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000808</arg>&apos; has unconnected output pin
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;switches&lt;0&gt;&quot;  LOC = &quot;L13&quot;;&gt; [top.ucf(1)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000809</arg>&apos; has unconnected output pin
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches&lt;1&gt;&quot;  LOC = &quot;L14&quot;;&gt; [top.ucf(2)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches&lt;1&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk0000080a</arg>&apos; has unconnected output pin
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;switches&lt;1&gt;&quot;  LOC = &quot;L14&quot;;&gt; [top.ucf(2)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk0000080b</arg>&apos; has unconnected output pin
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches&lt;2&gt;&quot;  LOC = &quot;H18&quot;;&gt; [top.ucf(3)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches&lt;2&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk0000080c</arg>&apos; has unconnected output pin
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;switches&lt;2&gt;&quot;  LOC = &quot;H18&quot;;&gt; [top.ucf(3)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk0000080d</arg>&apos; has unconnected output pin
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches&lt;3&gt;&quot;  LOC = &quot;N17&quot;;&gt; [top.ucf(4)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches&lt;3&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk0000081e</arg>&apos; has unconnected output pin
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;switches&lt;3&gt;&quot;  LOC = &quot;N17&quot;;&gt; [top.ucf(4)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk0000081f</arg>&apos; has unconnected output pin
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds&lt;0&gt;&quot;  LOC = &quot;F12&quot;;&gt; [top.ucf(5)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds&lt;0&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000820</arg>&apos; has unconnected output pin
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;leds&lt;0&gt;&quot;  LOC = &quot;F12&quot;;&gt; [top.ucf(5)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000872</arg>&apos; has unconnected output pin
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds&lt;1&gt;&quot;  LOC = &quot;E12&quot;;&gt; [top.ucf(6)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds&lt;1&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000873</arg>&apos; has unconnected output pin
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;leds&lt;1&gt;&quot;  LOC = &quot;E12&quot;;&gt; [top.ucf(6)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000874</arg>&apos; has unconnected output pin
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds&lt;2&gt;&quot;  LOC = &quot;E11&quot;;&gt; [top.ucf(7)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds&lt;2&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000875</arg>&apos; has unconnected output pin
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;leds&lt;2&gt;&quot;  LOC = &quot;E11&quot;;&gt; [top.ucf(7)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000876</arg>&apos; has unconnected output pin
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds&lt;3&gt;&quot;  LOC = &quot;F11&quot;;&gt; [top.ucf(8)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds&lt;3&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000877</arg>&apos; has unconnected output pin
-</msg>
-
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000878</arg>&apos; has unconnected output pin
-</msg>
-
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk00000879</arg>&apos; has unconnected output pin
-</msg>
-
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk0000088a</arg>&apos; has unconnected output pin
-</msg>
-
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk0000088b</arg>&apos; has unconnected output pin
-</msg>
-
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">your_instance_name/blk0000088c</arg>&apos; has unconnected output pin
-</msg>
-
-<msg type="warning" file="NgdBuild" num="837" delta="old" >pins &apos;<arg fmt="%s" index="1">I</arg>&apos; and &apos;<arg fmt="%s" index="2">O</arg>&apos; on instance &apos;<arg fmt="%s" index="3">clk_INV_0</arg>&apos; of type &apos;<arg fmt="%s" index="4">INV</arg>&apos; are both connected to the same signal &apos;<arg fmt="%s" index="5">clk</arg>&apos;, which forms a ring buffer.
-</msg>
-
-<msg type="warning" file="NgdBuild" num="483" delta="old" >Attribute &quot;<arg fmt="%s" index="1">INIT</arg>&quot; on &quot;<arg fmt="%s" index="2">your_instance_name/sig00000049</arg>&quot; is on the wrong type of object.  Please see the Constraints Guide for more information on this attribute.
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">your_instance_name/blk000000b8/sig00000a80</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">your_instance_name/blk000000b8/sig00000a81</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="483" delta="old" >Attribute &quot;<arg fmt="%s" index="1">INIT</arg>&quot; on &quot;<arg fmt="%s" index="2">your_instance_name/sig000000f8</arg>&quot; is on the wrong type of object.  Please see the Constraints Guide for more information on this attribute.
-</msg>
-
-<msg type="warning" file="NgdBuild" num="483" delta="old" >Attribute &quot;<arg fmt="%s" index="1">INIT</arg>&quot; on &quot;<arg fmt="%s" index="2">your_instance_name/sig000000e1</arg>&quot; is on the wrong type of object.  Please see the Constraints Guide for more information on this attribute.
-</msg>
-
-<msg type="warning" file="NgdBuild" num="483" delta="old" >Attribute &quot;<arg fmt="%s" index="1">INIT</arg>&quot; on &quot;<arg fmt="%s" index="2">your_instance_name/sig000000e0</arg>&quot; is on the wrong type of object.  Please see the Constraints Guide for more information on this attribute.
-</msg>
-
-<msg type="warning" file="NgdBuild" num="483" delta="old" >Attribute &quot;<arg fmt="%s" index="1">INIT</arg>&quot; on &quot;<arg fmt="%s" index="2">your_instance_name/sig000000f7</arg>&quot; is on the wrong type of object.  Please see the Constraints Guide for more information on this attribute.
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">your_instance_name/blk00000267/sig00000ceb</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">your_instance_name/blk00000267/sig00000cec</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">your_instance_name/blk00000285/sig00000d1b</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">your_instance_name/blk0000028c/sig00000d2a</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">your_instance_name/blk000007b1/sig00001023</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">your_instance_name/blk000007b2/sig00001046</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">your_instance_name/blk000007b3/sig00001069</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">your_instance_name/blk000007b4/sig0000108c</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">your_instance_name/blk000009bc/sig0000117b</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">your_instance_name/blk000009bc/sig0000117e</arg>&apos; has no driver
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;leds&lt;3&gt;&quot;  LOC = &quot;F11&quot;;&gt; [top.ucf(8)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
 </messages>
