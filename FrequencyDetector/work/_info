@@ -8,89 +8,176 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector
-Efft
-Z1 w1483378208
-Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z4 DPx6 unisim 4 vpkg 0 22 =E=Qil`0j3PcWN;Gd1E>l3
-Z5 DPx6 unisim 11 vcomponents 0 22 2L_N91<XgM:Bh8=P>9OR]0
-Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Edcm
+Z1 w1485162946
+Z2 DPx6 unisim 11 vcomponents 0 22 2L_N91<XgM:Bh8=P>9OR]0
+Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z8 8ipcore_dir/fft.vhd
-Z9 Fipcore_dir/fft.vhd
+Z6 8dcm.vhd
+Z7 Fdcm.vhd
 l0
-L43
-VEMa4lPbDW8a?37GAjIARW0
-!s100 J5IWEkAQ<InceUc01c?Tc1
-Z10 OP;C;10.4a;61
+L30
+V<VRmU:kBIMJ;ho3lGDUkd1
+!s100 PSc=k9kI8N2=^GL8Bc`J:1
+Z8 OP;C;10.4a;61
 31
-Z11 !s110 1483379443
+Z9 !s110 1485172381
 !i10b 1
-Z12 !s108 1483379443.000000
-Z13 !s90 -reportprogress|300|-explicit|-93|ipcore_dir/fft.vhd|
-Z14 !s107 ipcore_dir/fft.vhd|
+Z10 !s108 1485172380.000000
+Z11 !s90 -reportprogress|300|-explicit|-93|dcm.vhd|
+Z12 !s107 dcm.vhd|
 !i113 1
-Z15 o-explicit -93 -O0
-Z16 tExplicit 1
-Astructure
+Z13 o-explicit -93 -O0
+Z14 tExplicit 1
+Abehavioral
 R2
 R3
 R4
 R5
-R6
-R7
+DEx4 work 3 dcm 0 22 <VRmU:kBIMJ;ho3lGDUkd1
+l44
+L38
+VG^J<WD:=45TCX0GjLeS?o1
+!s100 c]VBTJ[M2^bCM^T3oI?o73
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Efft
+Z15 w1483378208
+Z16 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z17 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z18 DPx6 unisim 4 vpkg 0 22 =E=Qil`0j3PcWN;Gd1E>l3
+R2
+R4
+R5
+R0
+Z19 8ipcore_dir/fft.vhd
+Z20 Fipcore_dir/fft.vhd
+l0
+L43
+VEMa4lPbDW8a?37GAjIARW0
+!s100 J5IWEkAQ<InceUc01c?Tc1
+R8
+31
+Z21 !s110 1485172380
+!i10b 1
+R10
+Z22 !s90 -reportprogress|300|-explicit|-93|ipcore_dir/fft.vhd|
+Z23 !s107 ipcore_dir/fft.vhd|
+!i113 1
+R13
+R14
+Astructure
+R16
+R17
+R18
+R2
+R4
+R5
 DEx4 work 3 fft 0 22 EMa4lPbDW8a?37GAjIARW0
 l3116
 L65
 VXiRifG3g@ac2NM5DNe[Uh1
 !s100 GXAQiogB542baz^W>0W_z2
-R10
+R8
 31
-R11
+R21
 !i10b 1
-R12
+R10
+R22
+R23
+!i113 1
 R13
 R14
-!i113 1
-R15
-R16
 Etop
-Z17 w1483379438
-R6
-R7
+Z24 w1485170945
+R4
+R5
 R0
-Z18 8top.vhd
-Z19 Ftop.vhd
+Z25 8top.vhd
+Z26 Ftop.vhd
 l0
 L5
-VA<n0JafQ1OSK^f7LT^9i?1
-!s100 HYEK@VIEWYoXjIeof[5MJ1
-R10
+VMB<4gP_XVVU@[cUObL3V:3
+!s100 231HT22feX@jKQ>jLLQ4C2
+R8
 31
-R11
+R9
 !i10b 1
-R12
-Z20 !s90 -reportprogress|300|-explicit|-93|top.vhd|
-Z21 !s107 top.vhd|
+Z27 !s108 1485172381.000000
+Z28 !s90 -reportprogress|300|-explicit|-93|top.vhd|
+Z29 !s107 top.vhd|
 !i113 1
-R15
-R16
+R13
+R14
 Abehavioral
-R6
-R7
-Z22 DEx4 work 3 top 0 22 A<n0JafQ1OSK^f7LT^9i?1
-l50
-L8
-V`RzJ=CZgaC=ge;Cjf?og52
-!s100 lQID:9zcaIbC@MSPEILB`3
-R10
+R4
+R5
+Z30 DEx4 work 3 top 0 22 MB<4gP_XVVU@[cUObL3V:3
+l66
+L22
+V=;966:QKJ2JR>hWbOZGDo0
+!s100 95zzNoGQlUJJo9Xi4L<e_1
+R8
 31
-R11
+R9
 !i10b 1
-R12
-R20
-R21
+R27
+R28
+R29
 !i113 1
-R15
-R16
+R13
+R14
+Etop_tb
+Z31 w1485171132
+Z32 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R3
+R4
+R5
+R0
+Z33 8top_tb.vhd
+Z34 Ftop_tb.vhd
+l0
+L7
+V4NB8cTPC^b[eG]BKz<eK;1
+!s100 6IJLg7QbEfENfEif2a3080
+R8
+31
+R9
+!i10b 1
+R27
+Z35 !s90 -reportprogress|300|-explicit|-93|top_tb.vhd|
+Z36 !s107 top_tb.vhd|
+!i113 1
+R13
+R14
+Abehav
+R30
+R32
+R3
+R4
+R5
+Z37 DEx4 work 6 top_tb 0 22 4NB8cTPC^b[eG]BKz<eK;1
+l24
+L10
+Z38 V0[NPQ^;k_mURDjBXF1=KV2
+Z39 !s100 I52ondlnOl0`iz[nPNaaL2
+R8
+31
+R9
+!i10b 1
+R27
+R35
+R36
+!i113 1
+R13
+R14

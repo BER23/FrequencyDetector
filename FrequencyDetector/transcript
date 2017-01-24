@@ -1,9 +1,9 @@
 # Reading C:/Modeltech_pe_edu_10.4a/tcl/vsim/pref.tcl
-# do {top.fdo}
+# do {top_tb.fdo}
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 18:37:36 on Jan 02,2017
+# Start time: 12:53:00 on Jan 23,2017
 # vcom -reportprogress 300 -explicit -93 ipcore_dir/fft.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -14,17 +14,42 @@
 # -- Loading package VPKG
 # -- Compiling entity fft
 # -- Compiling architecture STRUCTURE of fft
-# End time: 18:37:36 on Jan 02,2017, Elapsed time: 0:00:00
+# End time: 12:53:00 on Jan 23,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 18:37:37 on Jan 02,2017
+# Start time: 12:53:00 on Jan 23,2017
+# vcom -reportprogress 300 -explicit -93 dcm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package VCOMPONENTS
+# -- Compiling entity dcm
+# -- Compiling architecture BEHAVIORAL of dcm
+# End time: 12:53:01 on Jan 23,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 12:53:01 on Jan 23,2017
 # vcom -reportprogress 300 -explicit -93 top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity top
 # -- Compiling architecture Behavioral of top
-# End time: 18:37:37 on Jan 02,2017, Elapsed time: 0:00:00
+# End time: 12:53:01 on Jan 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 12:53:01 on Jan 23,2017
+# vcom -reportprogress 300 -explicit -93 top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity top_tb
+# -- Compiling architecture behav of top_tb
+# -- Loading entity top
+# End time: 12:53:01 on Jan 23,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # //  ModelSim PE Student Edition 10.4a Apr  7 2015 
 # //
@@ -44,11 +69,14 @@
 # // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
 # // FOR HIGHER EDUCATION PURPOSES ONLY
 # //
-# vsim -gui -do "do {top.fdo}" 
-# Start time: 18:37:37 on Jan 02,2017
+# vsim -gui -do "do {top_tb.fdo}" 
+# Start time: 12:53:01 on Jan 23,2017
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.top_tb(behav)
 # Loading work.top(behavioral)
 # Loading unisim.vcomponents
 # Loading ieee.vital_timing(body)
@@ -77,335 +105,26 @@
 # Loading unisim.srl16e(srl16e_v)
 # Loading unisim.srlc16(srlc16_v)
 # Loading unisim.fds(fds_v)
-# ** Warning: Design size of 112108 statements or 2856 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
+# Loading work.dcm(behavioral)
+# Loading unisim.bufg(bufg_v)
+# Loading unisim.ibufg(ibufg_v)
+# Loading unisim.dcm_sp(dcm_sp_v)
+# Loading unisim.dcm_sp_clock_divide_by_2(dcm_sp_clock_divide_by_2_v)
+# Loading unisim.dcm_sp_maximum_period_check(dcm_sp_maximum_period_check_v)
+# Loading unisim.dcm_sp_clock_lost(dcm_sp_clock_lost_v)
+# ** Warning: Design size of 119797 statements or 2867 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
 # Expect performance to be quite adversely affected.
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-do {top.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 18:38:39 on Jan 02,2017
-# vcom -reportprogress 300 -explicit -93 ipcore_dir/fft.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VCOMPONENTS
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package VPKG
-# -- Compiling entity fft
-# -- Compiling architecture STRUCTURE of fft
-# End time: 18:38:39 on Jan 02,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 18:38:39 on Jan 02,2017
-# vcom -reportprogress 300 -explicit -93 top.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity top
-# -- Compiling architecture Behavioral of top
-# End time: 18:38:39 on Jan 02,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 18:38:40 on Jan 02,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.top(behavioral)
-# Loading unisim.vcomponents
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading unisim.vpkg(body)
-# Loading work.fft(structure)
-# Loading unisim.vcc(vcc_v)
-# Loading unisim.gnd(gnd_v)
-# Loading unisim.lut3(lut3_v)
-# Loading unisim.muxcy(muxcy_v)
-# Loading unisim.xorcy(xorcy_v)
-# Loading unisim.lut4(lut4_v)
-# Loading unisim.fdr(fdr_v)
-# Loading unisim.fdre(fdre_v)
-# Loading unisim.fd(fd_v)
-# Loading unisim.fde(fde_v)
-# Loading unisim.muxf5(muxf5_v)
-# Loading unisim.lut2(lut2_v)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_signed(body)
-# Loading unisim.mult18x18sio(mult18x18sio_v)
-# Loading unisim.lut1(lut1_v)
-# Loading unisim.inv(inv_v)
-# Loading unisim.lut2_d(lut2_d_v)
-# Loading unisim.srl16(srl16_v)
-# Loading unisim.srl16e(srl16e_v)
-# Loading unisim.srlc16(srlc16_v)
-# Loading unisim.fds(fds_v)
-# ** Warning: Design size of 112108 statements or 2856 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
-# Expect performance to be quite adversely affected.
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-do {top.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
+#           File in use by: User  Hostname: ZNAK-LAPTOP  ProcessID: 12136
 # 
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 18:45:37 on Jan 02,2017
-# vcom -reportprogress 300 -explicit -93 ipcore_dir/fft.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VCOMPONENTS
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package VPKG
-# -- Compiling entity fft
-# -- Compiling architecture STRUCTURE of fft
-# End time: 18:45:38 on Jan 02,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 18:45:38 on Jan 02,2017
-# vcom -reportprogress 300 -explicit -93 top.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity top
-# -- Compiling architecture Behavioral of top
-# End time: 18:45:38 on Jan 02,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 18:45:39 on Jan 02,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.top(behavioral)
-# Loading unisim.vcomponents
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading unisim.vpkg(body)
-# Loading work.fft(structure)
-# Loading unisim.vcc(vcc_v)
-# Loading unisim.gnd(gnd_v)
-# Loading unisim.lut3(lut3_v)
-# Loading unisim.muxcy(muxcy_v)
-# Loading unisim.xorcy(xorcy_v)
-# Loading unisim.lut4(lut4_v)
-# Loading unisim.fdr(fdr_v)
-# Loading unisim.fdre(fdre_v)
-# Loading unisim.fd(fd_v)
-# Loading unisim.fde(fde_v)
-# Loading unisim.muxf5(muxf5_v)
-# Loading unisim.lut2(lut2_v)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_signed(body)
-# Loading unisim.mult18x18sio(mult18x18sio_v)
-# Loading unisim.lut1(lut1_v)
-# Loading unisim.inv(inv_v)
-# Loading unisim.lut2_d(lut2_d_v)
-# Loading unisim.srl16(srl16_v)
-# Loading unisim.srl16e(srl16e_v)
-# Loading unisim.srlc16(srlc16_v)
-# Loading unisim.fds(fds_v)
-# ** Warning: Design size of 112114 statements or 2856 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
-# Expect performance to be quite adversely affected.
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-do {top.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
+#           Attempting to use alternate WLF file "./wlft5dvts1".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 18:47:06 on Jan 02,2017
-# vcom -reportprogress 300 -explicit -93 ipcore_dir/fft.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VCOMPONENTS
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package VPKG
-# -- Compiling entity fft
-# -- Compiling architecture STRUCTURE of fft
-# End time: 18:47:07 on Jan 02,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 18:47:07 on Jan 02,2017
-# vcom -reportprogress 300 -explicit -93 top.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity top
-# -- Compiling architecture Behavioral of top
-# End time: 18:47:07 on Jan 02,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 18:47:08 on Jan 02,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.top(behavioral)
-# Loading unisim.vcomponents
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading unisim.vpkg(body)
-# Loading work.fft(structure)
-# Loading unisim.vcc(vcc_v)
-# Loading unisim.gnd(gnd_v)
-# Loading unisim.lut3(lut3_v)
-# Loading unisim.muxcy(muxcy_v)
-# Loading unisim.xorcy(xorcy_v)
-# Loading unisim.lut4(lut4_v)
-# Loading unisim.fdr(fdr_v)
-# Loading unisim.fdre(fdre_v)
-# Loading unisim.fd(fd_v)
-# Loading unisim.fde(fde_v)
-# Loading unisim.muxf5(muxf5_v)
-# Loading unisim.lut2(lut2_v)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_signed(body)
-# Loading unisim.mult18x18sio(mult18x18sio_v)
-# Loading unisim.lut1(lut1_v)
-# Loading unisim.inv(inv_v)
-# Loading unisim.lut2_d(lut2_d_v)
-# Loading unisim.srl16(srl16_v)
-# Loading unisim.srl16e(srl16e_v)
-# Loading unisim.srlc16(srlc16_v)
-# Loading unisim.fds(fds_v)
-# ** Warning: Design size of 112114 statements or 2856 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
-# Expect performance to be quite adversely affected.
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-do {top.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
+#           Using alternate file: ./wlft5dvts1
 # 
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 18:48:50 on Jan 02,2017
-# vcom -reportprogress 300 -explicit -93 ipcore_dir/fft.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VCOMPONENTS
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package VPKG
-# -- Compiling entity fft
-# -- Compiling architecture STRUCTURE of fft
-# End time: 18:48:51 on Jan 02,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 18:48:51 on Jan 02,2017
-# vcom -reportprogress 300 -explicit -93 top.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity top
-# -- Compiling architecture Behavioral of top
-# End time: 18:48:51 on Jan 02,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 18:48:52 on Jan 02,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.top(behavioral)
-# Loading unisim.vcomponents
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading unisim.vpkg(body)
-# Loading work.fft(structure)
-# Loading unisim.vcc(vcc_v)
-# Loading unisim.gnd(gnd_v)
-# Loading unisim.lut3(lut3_v)
-# Loading unisim.muxcy(muxcy_v)
-# Loading unisim.xorcy(xorcy_v)
-# Loading unisim.lut4(lut4_v)
-# Loading unisim.fdr(fdr_v)
-# Loading unisim.fdre(fdre_v)
-# Loading unisim.fd(fd_v)
-# Loading unisim.fde(fde_v)
-# Loading unisim.muxf5(muxf5_v)
-# Loading unisim.lut2(lut2_v)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_signed(body)
-# Loading unisim.mult18x18sio(mult18x18sio_v)
-# Loading unisim.lut1(lut1_v)
-# Loading unisim.inv(inv_v)
-# Loading unisim.lut2_d(lut2_d_v)
-# Loading unisim.srl16(srl16_v)
-# Loading unisim.srl16e(srl16e_v)
-# Loading unisim.srlc16(srlc16_v)
-# Loading unisim.fds(fds_v)
-# ** Warning: Design size of 112114 statements or 2856 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
-# Expect performance to be quite adversely affected.
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-do {top.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 18:50:43 on Jan 02,2017
-# vcom -reportprogress 300 -explicit -93 ipcore_dir/fft.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VCOMPONENTS
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package VPKG
-# -- Compiling entity fft
-# -- Compiling architecture STRUCTURE of fft
-# End time: 18:50:43 on Jan 02,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 18:50:43 on Jan 02,2017
-# vcom -reportprogress 300 -explicit -93 top.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity top
-# -- Compiling architecture Behavioral of top
-# End time: 18:50:44 on Jan 02,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 18:50:45 on Jan 02,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.top(behavioral)
-# Loading unisim.vcomponents
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading unisim.vpkg(body)
-# Loading work.fft(structure)
-# Loading unisim.vcc(vcc_v)
-# Loading unisim.gnd(gnd_v)
-# Loading unisim.lut3(lut3_v)
-# Loading unisim.muxcy(muxcy_v)
-# Loading unisim.xorcy(xorcy_v)
-# Loading unisim.lut4(lut4_v)
-# Loading unisim.fdr(fdr_v)
-# Loading unisim.fdre(fdre_v)
-# Loading unisim.fd(fd_v)
-# Loading unisim.fde(fde_v)
-# Loading unisim.muxf5(muxf5_v)
-# Loading unisim.lut2(lut2_v)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_signed(body)
-# Loading unisim.mult18x18sio(mult18x18sio_v)
-# Loading unisim.lut1(lut1_v)
-# Loading unisim.inv(inv_v)
-# Loading unisim.lut2_d(lut2_d_v)
-# Loading unisim.srl16(srl16_v)
-# Loading unisim.srl16e(srl16e_v)
-# Loading unisim.srlc16(srlc16_v)
-# Loading unisim.fds(fds_v)
-# ** Warning: Design size of 112114 statements or 2856 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
-# Expect performance to be quite adversely affected.
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# End time: 18:53:12 on Jan 02,2017, Elapsed time: 0:02:27
-# Errors: 0, Warnings: 1
+# End time: 12:56:50 on Jan 23,2017, Elapsed time: 0:03:49
+# Errors: 0, Warnings: 3

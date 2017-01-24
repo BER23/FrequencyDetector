@@ -3,6 +3,20 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity top is
+generic( FS : integer range 0 to 20000 := 20000;
+			FX : integer range 0 to 10000 := 5000
+);
+port(switches : in std_logic_vector(3 downto 0);
+		leds : out std_logic_vector(3 downto 0);
+		clk : in std_logic;
+		start : in std_logic;
+		xn_re : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		xk_re : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		xk_im : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		done : OUT STD_LOGIC;
+		xn_index : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+		xk_index : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
+		);
 end top;
 
 architecture Behavioral of top is
@@ -29,23 +43,25 @@ COMPONENT fft
   );
 END COMPONENT;
 
-signal	 clk : STD_LOGIC := '0';
-signal    start : STD_LOGIC;
-signal    xn_re : STD_LOGIC_VECTOR(15 DOWNTO 0);
+COMPONENT dcm
+	PORT(
+		CLKIN_IN : IN std_logic;          
+		CLKFX_OUT : OUT std_logic;
+		CLKIN_IBUFG_OUT : OUT std_logic;
+		CLK0_OUT : OUT std_logic;
+		LOCKED_OUT : OUT std_logic
+		);
+	END COMPONENT;
+
 signal    xn_im : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal    fwd_inv : STD_LOGIC;
 signal    fwd_inv_we : STD_LOGIC;
 signal    scale_sch : STD_LOGIC_VECTOR(3 DOWNTO 0);
 signal    scale_sch_we : STD_LOGIC;
 signal    rfd : STD_LOGIC;
-signal    xn_index : STD_LOGIC_VECTOR(2 DOWNTO 0);
 signal    busy : STD_LOGIC;
 signal    edone : STD_LOGIC;
-signal    done : STD_LOGIC;
 signal    dv : STD_LOGIC;
-signal    xk_index : STD_LOGIC_VECTOR(2 DOWNTO 0);
-signal    xk_re : STD_LOGIC_VECTOR(15 DOWNTO 0);
-signal    xk_im : STD_LOGIC_VECTOR(15 DOWNTO 0);
 
 begin
 
@@ -70,15 +86,25 @@ your_instance_name : fft
     xk_im => xk_im
   );
 
-clk <= not clk after 20 ns;
+	Inst_dcm: dcm PORT MAP(
+		CLKIN_IN => clk,
+		CLKFX_OUT => open,
+		CLKIN_IBUFG_OUT => open,
+		CLK0_OUT => open,
+		LOCKED_OUT => open
+	);
+
 xn_im <= (others => '0');
-xn_re <= "0000000011111111", "0000000000001111" after 80 ns;
+--xn_re <= "0000000011111111", "0000000000001111" after 80 ns;
 scale_sch_we <= '1';
 scale_sch <= "1110";
-start <= '1', '0' after 2 us, '1' after 4 us;
+--start <= '1', '0' after 2 us, '1' after 4 us;
 fwd_inv_we <= '1';
 fwd_inv <= '1';
 
+leds(0) <= switches(0);
+leds(1) <= switches(1);
+leds(2) <= switches(2);
+leds(3) <= switches(3);
 
 end Behavioral;
-

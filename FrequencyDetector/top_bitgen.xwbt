@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\User\Desktop\Politechnika\PUR projekt\FrequencyDetector\top.ncd
+OUTFILE=C:\Users\User\Desktop\Politechnika\PUR projekt\FrequencyDetector\top.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\User\Desktop\Politechnika\PUR projekt\FrequencyDetector
+LICENSE=WebPack
+USER_INFO=210869455_0_0_634

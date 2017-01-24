@@ -1,0 +1,123 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p
+xc3s500e-fg320-4 top.ngc top.ngd
+
+Reading NGO file "C:/Users/User/Desktop/Politechnika/PUR
+projekt/FrequencyDetector/top.ngc" ...
+Loading design module "ipcore_dir/fft.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "top.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000806' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000807' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000808' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000809' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk0000080a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk0000080b' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk0000080c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk0000080d' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk0000081e' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk0000081f' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000820' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000872' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000873' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000874' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000875' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000876' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000877' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000878' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk00000879' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk0000088a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk0000088b' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'your_instance_name/blk0000088c' has
+   unconnected output pin
+WARNING:NgdBuild:837 - pins 'I' and 'O' on instance 'clk_INV_0' of type 'INV'
+   are both connected to the same signal 'clk', which forms a ring buffer.
+WARNING:NgdBuild:483 - Attribute "INIT" on "your_instance_name/sig00000049" is
+   on the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:452 - logical net 'your_instance_name/blk000000b8/sig00000a80'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'your_instance_name/blk000000b8/sig00000a81'
+   has no driver
+WARNING:NgdBuild:483 - Attribute "INIT" on "your_instance_name/sig000000f8" is
+   on the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:483 - Attribute "INIT" on "your_instance_name/sig000000e1" is
+   on the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:483 - Attribute "INIT" on "your_instance_name/sig000000e0" is
+   on the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:483 - Attribute "INIT" on "your_instance_name/sig000000f7" is
+   on the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:452 - logical net 'your_instance_name/blk00000267/sig00000ceb'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'your_instance_name/blk00000267/sig00000cec'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'your_instance_name/blk00000285/sig00000d1b'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'your_instance_name/blk0000028c/sig00000d2a'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'your_instance_name/blk000007b1/sig00001023'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'your_instance_name/blk000007b2/sig00001046'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'your_instance_name/blk000007b3/sig00001069'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'your_instance_name/blk000007b4/sig0000108c'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'your_instance_name/blk000009bc/sig0000117b'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'your_instance_name/blk000009bc/sig0000117e'
+   has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  40
+
+Total memory usage is 178396 kilobytes
+
+Writing NGD file "top.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "top.bld"...
