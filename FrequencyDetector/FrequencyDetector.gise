@@ -106,16 +106,15 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1485271145" xil_pn:in_ck="5555858425433852485" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1485271145">
+    <transform xil_pn:end_ts="1485458442" xil_pn:in_ck="664870081376658947" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1485458441">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="complex_package.vhd"/>
+      <outfile xil_pn:name="sdft.vhd"/>
+      <outfile xil_pn:name="sdft_constant_lut.vhd"/>
+      <outfile xil_pn:name="sdft_tb.vhd"/>
+      <outfile xil_pn:name="top.vhd"/>
+      <outfile xil_pn:name="top_tb.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1485269729" xil_pn:in_ck="-7186897585538331039" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6073038854024842468" xil_pn:start_ts="1485269729">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -132,27 +131,25 @@
       <outfile xil_pn:name="ipcore_dir/fft.ngc"/>
       <outfile xil_pn:name="ipcore_dir/fft.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1485271145" xil_pn:in_ck="-8313085583371356503" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1485271145">
+    <transform xil_pn:end_ts="1485458442" xil_pn:in_ck="2946111265501640935" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1485458442">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="complex_package.vhd"/>
+      <outfile xil_pn:name="dcm.vhd"/>
+      <outfile xil_pn:name="sdft.vhd"/>
+      <outfile xil_pn:name="sdft_constant_lut.vhd"/>
+      <outfile xil_pn:name="sdft_tb.vhd"/>
+      <outfile xil_pn:name="top.vhd"/>
+      <outfile xil_pn:name="top_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1485271147" xil_pn:in_ck="8702089077648160648" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-9160223448444334652" xil_pn:start_ts="1485271145">
+    <transform xil_pn:end_ts="1485458445" xil_pn:in_ck="2792943696427432742" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-9160223448444334652" xil_pn:start_ts="1485458442">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="sdft_tb.fdo"/>
+      <outfile xil_pn:name="vsim.wlf"/>
+      <outfile xil_pn:name="work"/>
     </transform>
     <transform xil_pn:end_ts="1482146438" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1482146438">
       <status xil_pn:value="SuccessfullyRun"/>

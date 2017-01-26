@@ -3,7 +3,18 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 16:19:13 on Jan 24,2017
+# Start time: 20:20:51 on Jan 26,2017
+# vcom -reportprogress 300 -explicit -93 sdft_constant_lut.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package sdft_constant_lut
+# -- Compiling package body sdft_constant_lut
+# -- Loading package sdft_constant_lut
+# End time: 20:20:51 on Jan 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 20:20:51 on Jan 26,2017
 # vcom -reportprogress 300 -explicit -93 complex_package.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -12,34 +23,31 @@
 # -- Compiling package complex_package
 # -- Compiling package body complex_package
 # -- Loading package complex_package
-# End time: 16:19:13 on Jan 24,2017, Elapsed time: 0:00:00
+# End time: 20:20:51 on Jan 26,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 16:19:13 on Jan 24,2017
+# Start time: 20:20:51 on Jan 26,2017
 # vcom -reportprogress 300 -explicit -93 sdft.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Loading package instance fixed_pkg
-# -- Loading package fixed_float_types
-# -- Loading package fixed_generic_pkg
-# -- Loading package MATH_REAL
-# -- Loading package body fixed_generic_pkg
 # -- Loading package complex_package
+# -- Loading package sdft_constant_lut
 # -- Compiling entity sdft
 # -- Compiling architecture Behavioral of sdft
-# End time: 16:19:13 on Jan 24,2017, Elapsed time: 0:00:00
+# End time: 20:20:51 on Jan 26,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 16:19:13 on Jan 24,2017
+# Start time: 20:20:51 on Jan 26,2017
 # vcom -reportprogress 300 -explicit -93 sdft_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
 # -- Compiling entity sdft_tb
 # -- Compiling architecture behavior of sdft_tb
-# End time: 16:19:14 on Jan 24,2017, Elapsed time: 0:00:01
+# End time: 20:20:51 on Jan 26,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # //  ModelSim PE Student Edition 10.4a Apr  7 2015 
 # //
@@ -60,34 +68,32 @@
 # // FOR HIGHER EDUCATION PURPOSES ONLY
 # //
 # vsim -gui -do "do {sdft_tb.fdo}" 
-# Start time: 16:19:14 on Jan 24,2017
+# Start time: 20:20:51 on Jan 26,2017
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
 # Loading work.sdft_tb(behavior)
 # Loading ieee.numeric_std(body)
-# Loading ieee.fixed_float_types
-# Loading ieee.math_real(body)
-# Loading ieee.fixed_generic_pkg(body)
-# Loading ieee.fixed_pkg
 # Loading work.complex_package(body)
+# Loading work.sdft_constant_lut(body)
 # Loading work.sdft(behavioral)
-# ** Warning: Design size of 15081 statements or 2 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
-# Expect performance to be quite adversely affected.
-# ** Warning: (vsim-8683) Uninitialized out port /sdft_tb/uut/output_value(7 downto 0) has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /sdft_tb/uut/output_value(15 downto 0) has no driver.
 # 
-# This port will contribute value (8'hXX) to the signal network.
+# This port will contribute value (16'hXXXX) to the signal network.
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: User  Hostname: ZNAK-LAPTOP  ProcessID: 12136
 # 
-#           Attempting to use alternate WLF file "./wlftdbk0b7".
+#           Attempting to use alternate WLF file "./wlftd2h12w".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftdbk0b7
+#           Using alternate file: ./wlftd2h12w
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# End time: 16:19:32 on Jan 24,2017, Elapsed time: 0:00:18
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /sdft_tb/uut
+# End time: 20:21:07 on Jan 26,2017, Elapsed time: 0:00:16
 # Errors: 0, Warnings: 4

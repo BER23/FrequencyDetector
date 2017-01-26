@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 package complex_package is
 	type complex is record
-		re, im : integer range -32768 to 32767;
+		re, im : integer range  -2147483648 to  2147483647;
 	end record;
 	
 	function "+" (l : complex; r : complex) return complex;
