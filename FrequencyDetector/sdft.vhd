@@ -3,8 +3,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use work.complex_package.all;
-use work.fixed_generic_pkg_mod.all;
-
 entity sdft is
     Port ( clk : in  STD_LOGIC;
 			  start : in  STD_LOGIC;
