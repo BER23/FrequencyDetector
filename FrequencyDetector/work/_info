@@ -12,34 +12,34 @@ Pcomplex_package
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z4 w1485459209
+Z4 w1485552159
 Z5 dC:/Users/paulina/2sem/PUR/projekt/FrequencyDetector/FrequencyDetector
 Z6 8complex_package.vhd
 Z7 Fcomplex_package.vhd
 l0
 L5
-VgF>B1@9O8nTOmC__;ReGz1
-!s100 LO^ado2aT<eV0S@T1lh9n2
+V9^3:9ic69hhTNiNi8kDEB0
+!s100 >dnNZb:]8U=h]aUIoXlAd3
 Z8 OP;C;10.4a;61
 31
 b1
-Z9 !s110 1485539684
+Z9 !s110 1485552185
 !i10b 1
-Z10 !s108 1485539684.000000
+Z10 !s108 1485552184.000000
 Z11 !s90 -reportprogress|300|-explicit|-93|complex_package.vhd|
 Z12 !s107 complex_package.vhd|
 !i113 1
 Z13 o-explicit -93 -O0
 Z14 tExplicit 1
 Bbody
-Z15 DPx4 work 15 complex_package 0 22 gF>B1@9O8nTOmC__;ReGz1
+Z15 DPx4 work 15 complex_package 0 22 9^3:9ic69hhTNiNi8kDEB0
 R1
 R2
 R3
 l0
-L14
-V@d:LZH`[?^Vn7D5dEzSo_2
-!s100 :OC1Gm7CR:I_PJGCPQ3Mf3
+L15
+VB_Lh]WW?XeWA[k>L^6ch92
+!s100 e0mWJH3k^:0Ql5KXhC>Y33
 R8
 31
 R9
@@ -142,7 +142,7 @@ R33
 R13
 R14
 Esdft
-Z34 w1485539249
+Z34 w1485551834
 Z35 DPx4 work 17 sdft_constant_lut 0 22 mfV3d>k`o3A3?B[PZo4?k2
 R15
 R1
@@ -157,9 +157,9 @@ VTP81T[_ig46kdA>T:zPnC1
 !s100 >DQgDoN;[jHHa;BXgGmb80
 R8
 31
-Z38 !s110 1485539685
+R9
 !i10b 1
-R10
+Z38 !s108 1485552185.000000
 Z39 !s90 -reportprogress|300|-explicit|-93|sdft.vhd|
 Z40 !s107 sdft.vhd|
 !i113 1
@@ -174,13 +174,13 @@ R3
 DEx4 work 4 sdft 0 22 TP81T[_ig46kdA>T:zPnC1
 l27
 L18
-Vzd56J2oWz@bFQckgeo8Ug3
-!s100 9f5`H5FRTbnY6^cgc_V8h1
+VWNhgQ^[CM8f^:STD1V6Do3
+!s100 M_hg]7?WM:jz6W?`c4X<;3
 R8
 31
-R38
+R9
 !i10b 1
-R10
+R38
 R39
 R40
 !i113 1
@@ -199,11 +199,11 @@ VmfV3d>k`o3A3?B[PZo4?k2
 !s100 EBO]<UiYc`URJNKYUZbj12
 R8
 31
-Z44 !s110 1485539683
+Z44 !s110 1485552184
 !i10b 1
-Z45 !s108 1485539683.000000
-Z46 !s90 -reportprogress|300|-explicit|-93|sdft_constant_lut.vhd|
-Z47 !s107 sdft_constant_lut.vhd|
+R10
+Z45 !s90 -reportprogress|300|-explicit|-93|sdft_constant_lut.vhd|
+Z46 !s107 sdft_constant_lut.vhd|
 !i113 1
 R13
 R14
@@ -219,63 +219,63 @@ R8
 31
 R44
 !i10b 1
+R10
 R45
 R46
-R47
 !i113 1
 R13
 R14
 R16
 Esdft_tb
-Z48 w1485539678
-Z49 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z47 w1485547851
+Z48 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R1
 R2
 R3
 R5
-Z50 8sdft_tb.vhd
-Z51 Fsdft_tb.vhd
+Z49 8sdft_tb.vhd
+Z50 Fsdft_tb.vhd
 l0
 L7
 Vdojb`NaAeLA?cUmQ^7STA1
 !s100 ;z@4SJE5ZiGOTP<VKMK6E1
 R8
 31
-R38
+Z51 !s110 1485552186
 !i10b 1
-Z52 !s108 1485539685.000000
-Z53 !s90 -reportprogress|300|-explicit|-93|sdft_tb.vhd|
-Z54 !s107 sdft_tb.vhd|
+R38
+Z52 !s90 -reportprogress|300|-explicit|-93|sdft_tb.vhd|
+Z53 !s107 sdft_tb.vhd|
 !i113 1
 R13
 R14
 Abehavior
-R49
+R48
 R1
 R2
 R3
-Z55 DEx4 work 7 sdft_tb 0 22 dojb`NaAeLA?cUmQ^7STA1
+Z54 DEx4 work 7 sdft_tb 0 22 dojb`NaAeLA?cUmQ^7STA1
 l40
 L10
-Vi5zQVAkoN8ToR:ZPz6S:<1
-!s100 AoJMf^0z_7^__FB?Wk`=R2
+Z55 VOl_RI`D[aRj]j3VL_=jW?3
+Z56 !s100 5e1aOk3i[gXE:m]WRPj`11
 R8
 31
-R38
+R51
 !i10b 1
+R38
 R52
 R53
-R54
 !i113 1
 R13
 R14
 Etop
-Z56 w1485170945
+Z57 w1485170945
 R2
 R3
 R0
-Z57 8top.vhd
-Z58 Ftop.vhd
+Z58 8top.vhd
+Z59 Ftop.vhd
 l0
 L5
 VMB<4gP_XVVU@[cUObL3V:3
@@ -284,16 +284,16 @@ R8
 31
 R21
 !i10b 1
-Z59 !s108 1485172381.000000
-Z60 !s90 -reportprogress|300|-explicit|-93|top.vhd|
-Z61 !s107 top.vhd|
+Z60 !s108 1485172381.000000
+Z61 !s90 -reportprogress|300|-explicit|-93|top.vhd|
+Z62 !s107 top.vhd|
 !i113 1
 R13
 R14
 Abehavioral
 R2
 R3
-Z62 DEx4 work 3 top 0 22 MB<4gP_XVVU@[cUObL3V:3
+Z63 DEx4 work 3 top 0 22 MB<4gP_XVVU@[cUObL3V:3
 l66
 L22
 V=;966:QKJ2JR>hWbOZGDo0
@@ -302,21 +302,21 @@ R8
 31
 R21
 !i10b 1
-R59
 R60
 R61
+R62
 !i113 1
 R13
 R14
 Etop_tb
-Z63 w1485171132
-R49
+Z64 w1485171132
+R48
 R1
 R2
 R3
 R0
-Z64 8top_tb.vhd
-Z65 Ftop_tb.vhd
+Z65 8top_tb.vhd
+Z66 Ftop_tb.vhd
 l0
 L7
 V4NB8cTPC^b[eG]BKz<eK;1
@@ -325,15 +325,15 @@ R8
 31
 R21
 !i10b 1
-R59
-Z66 !s90 -reportprogress|300|-explicit|-93|top_tb.vhd|
-Z67 !s107 top_tb.vhd|
+R60
+Z67 !s90 -reportprogress|300|-explicit|-93|top_tb.vhd|
+Z68 !s107 top_tb.vhd|
 !i113 1
 R13
 R14
 Abehav
-R62
-R49
+R63
+R48
 R1
 R2
 R3
@@ -346,9 +346,9 @@ R8
 31
 R21
 !i10b 1
-R59
-R66
+R60
 R67
+R68
 !i113 1
 R13
 R14

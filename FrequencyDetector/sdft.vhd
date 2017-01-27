@@ -18,35 +18,37 @@ end sdft;
 architecture Behavioral of sdft is
 
 signal counter : integer range 0 to 511 := 0;
-signal s1 : complex :=(0,0);
-signal s2 : complex :=(0,0);
-signal coef : complex :=(to_integer(signed(re_lut(10))),to_integer(signed(im_lut(10))));
-signal data_complex : complex :=(0,0);
+signal s1 : complex := ((others => '0'),(others => '0'));
+signal s2 : complex := ((others => '0'),(others => '0'));
+signal coef : complex := (signed(re_lut(10)),signed(im_lut(10)));
+signal data_complex : complex := ((others => '0'),(others => '0'));
 signal data_fixed : std_logic_vector(31 downto 0);
 signal output_fixed : STD_LOGIC_VECTOR (31 downto 0);
 begin
 
 data_fixed <= data&"0000000000000000";
-data_complex.re <= to_integer(signed(data_fixed));
+data_complex.re <= signed(data_fixed);
 
 calculate: process(clk)
+variable s1v : complex;
 begin
 if clk'event and clk='1' and start='1' then
 		if counter=511 then
 			counter <= 0;
 			done<='1';
-			s1 <= (0,0);
-			s2 <= (0,0);
+			s1 <= ((others => '0'),(others => '0'));
+			s2 <= ((others => '0'),(others => '0'));
 		else
 			done <= '0';
 			counter <= counter + 1;
 		end if;
-		s1 <= data_complex + coef*s2;
-		s2 <= s1;
+		s1v := s1;
+		s1 <= data_complex + coef*s1v;
+		--s2 <= s1;
 	end if;
 end process;
 
-output_fixed <= std_logic_vector(to_signed(s1.re,32));
+output_fixed <= std_logic_vector(s1.re);
 output_value <= output_fixed(31 downto 16);
 
 end Behavioral;

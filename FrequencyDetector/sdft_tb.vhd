@@ -66,9 +66,9 @@ BEGIN
 	begin
 		if clk='1' and clk'event and start_i='1' then
 			if endfile(file_inputs) then
-				assert false
-					report "End of file "
-					severity Warning;
+				--assert false
+				--	report "End of file "
+				--	severity Warning;
 			else
 	        	readline(file_inputs, line_inputs);
 				read(line_inputs, data_int);
