@@ -1,5 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 USE ieee.std_logic_textio.all;
 USE std.textio.all;
   
@@ -41,7 +42,7 @@ BEGIN
 	-- Instantiate the Unit Under Test (UUT)
    uut: sdft PORT MAP (
           clk => clk,
-          start => start,
+          start => start_i,
           data => data,
           line_to_find => line_to_find,
           dft_points => dft_points,
@@ -58,19 +59,20 @@ BEGIN
 		wait for clk_period/2;
    end process;
  
-  	read_file: process (start_i)
+  	read_file: process (clk)
 		file file_inputs: text open read_mode is "testbench_table.txt";
 		variable line_inputs: line;
-		variable int : integer range -32768 to 32767;
+		variable data_int : integer range -32768 to 32767;
 	begin
-		if start_i='1' and start_i'event then
+		if clk='1' and clk'event and start_i='1' then
 			if endfile(file_inputs) then
 				assert false
 					report "End of file "
-					severity Failure;
+					severity Warning;
 			else
 	        	readline(file_inputs, line_inputs);
-				read(line_inputs, int);
+				read(line_inputs, data_int);
+				data <=  std_logic_vector(to_signed(data_int,16));
 			end if;
 		end if;
     end process read_file;
@@ -82,12 +84,20 @@ BEGIN
       -- hold reset state for 100 ns.
       wait for 100 ns;	
 
-      wait for clk_period*10;
+      --wait for clk_period*10;
 		
 		start_i <= '1';
       -- insert stimulus here 
 
       wait;
    end process;
+	
+	sim_end_process: process
+	begin
+		wait for 100000 ns;
+		assert false
+			report "End of simulation at time " & time'image(now)
+			severity Failure;
+	end process sim_end_process;
 
 END;

@@ -12,8 +12,8 @@ Pcomplex_package
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z4 w1485457320
-Z5 dC:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector
+Z4 w1485459209
+Z5 dC:/Users/paulina/2sem/PUR/projekt/FrequencyDetector/FrequencyDetector
 Z6 8complex_package.vhd
 Z7 Fcomplex_package.vhd
 l0
@@ -23,9 +23,9 @@ VgF>B1@9O8nTOmC__;ReGz1
 Z8 OP;C;10.4a;61
 31
 b1
-Z9 !s110 1485458451
+Z9 !s110 1485539684
 !i10b 1
-Z10 !s108 1485458451.000000
+Z10 !s108 1485539684.000000
 Z11 !s90 -reportprogress|300|-explicit|-93|complex_package.vhd|
 Z12 !s107 complex_package.vhd|
 !i113 1
@@ -142,7 +142,7 @@ R33
 R13
 R14
 Esdft
-Z34 w1485458253
+Z34 w1485539249
 Z35 DPx4 work 17 sdft_constant_lut 0 22 mfV3d>k`o3A3?B[PZo4?k2
 R15
 R1
@@ -157,11 +157,11 @@ VTP81T[_ig46kdA>T:zPnC1
 !s100 >DQgDoN;[jHHa;BXgGmb80
 R8
 31
-R9
+Z38 !s110 1485539685
 !i10b 1
 R10
-Z38 !s90 -reportprogress|300|-explicit|-93|sdft.vhd|
-Z39 !s107 sdft.vhd|
+Z39 !s90 -reportprogress|300|-explicit|-93|sdft.vhd|
+Z40 !s107 sdft.vhd|
 !i113 1
 R13
 R14
@@ -172,38 +172,38 @@ R1
 R2
 R3
 DEx4 work 4 sdft 0 22 TP81T[_ig46kdA>T:zPnC1
-l26
+l27
 L18
-Vak=7XAn?cB]Ie8XJKG2@F0
-!s100 ;PRXz=6bZ0GIEPAQn_hc10
+Vzd56J2oWz@bFQckgeo8Ug3
+!s100 9f5`H5FRTbnY6^cgc_V8h1
 R8
 31
-R9
+R38
 !i10b 1
 R10
-R38
 R39
+R40
 !i113 1
 R13
 R14
 Psdft_constant_lut
 R2
 R3
-Z40 w1485457524
+Z41 w1485459210
 R5
-Z41 8sdft_constant_lut.vhd
-Z42 Fsdft_constant_lut.vhd
+Z42 8sdft_constant_lut.vhd
+Z43 Fsdft_constant_lut.vhd
 l0
 L4
 VmfV3d>k`o3A3?B[PZo4?k2
 !s100 EBO]<UiYc`URJNKYUZbj12
 R8
 31
-R9
+Z44 !s110 1485539683
 !i10b 1
-R10
-Z43 !s90 -reportprogress|300|-explicit|-93|sdft_constant_lut.vhd|
-Z44 !s107 sdft_constant_lut.vhd|
+Z45 !s108 1485539683.000000
+Z46 !s90 -reportprogress|300|-explicit|-93|sdft_constant_lut.vhd|
+Z47 !s107 sdft_constant_lut.vhd|
 !i113 1
 R13
 R14
@@ -217,63 +217,65 @@ VmZCX7EjV`e[iX;zflI[Ra2
 !s100 gKjNb_C`FcM?6hkJ]T`^m1
 R8
 31
-R9
-!i10b 1
-R10
-R43
 R44
+!i10b 1
+R45
+R46
+R47
 !i113 1
 R13
 R14
 R16
 Esdft_tb
-Z45 w1485458347
-Z46 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z48 w1485539678
+Z49 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R1
 R2
 R3
 R5
-Z47 8sdft_tb.vhd
-Z48 Fsdft_tb.vhd
+Z50 8sdft_tb.vhd
+Z51 Fsdft_tb.vhd
 l0
-L6
-VPZ>=hS9P3WPoQL5W;VSa03
-!s100 >ePgS1Cg=>]:ck]kdni5X3
+L7
+Vdojb`NaAeLA?cUmQ^7STA1
+!s100 ;z@4SJE5ZiGOTP<VKMK6E1
 R8
 31
-R9
+R38
 !i10b 1
-R10
-Z49 !s90 -reportprogress|300|-explicit|-93|sdft_tb.vhd|
-Z50 !s107 sdft_tb.vhd|
+Z52 !s108 1485539685.000000
+Z53 !s90 -reportprogress|300|-explicit|-93|sdft_tb.vhd|
+Z54 !s107 sdft_tb.vhd|
 !i113 1
 R13
 R14
 Abehavior
-R46
+R49
+R1
 R2
 R3
-Z51 DEx4 work 7 sdft_tb 0 22 PZ>=hS9P3WPoQL5W;VSa03
-l39
-L9
-Z52 Vz=^;oFd0XTIRg`O1oLc`E3
-Z53 !s100 QHaJB0YKU0PZf?U;?ULd11
+Z55 DEx4 work 7 sdft_tb 0 22 dojb`NaAeLA?cUmQ^7STA1
+l40
+L10
+Vi5zQVAkoN8ToR:ZPz6S:<1
+!s100 AoJMf^0z_7^__FB?Wk`=R2
 R8
 31
-R9
+R38
 !i10b 1
-R10
-R49
-R50
+R52
+R53
+R54
 !i113 1
 R13
 R14
 Etop
-Z54 w1485170945
+Z56 w1485170945
 R2
 R3
 R0
-Z55 8top.vhd
-Z56 Ftop.vhd
+Z57 8top.vhd
+Z58 Ftop.vhd
 l0
 L5
 VMB<4gP_XVVU@[cUObL3V:3
@@ -282,16 +284,16 @@ R8
 31
 R21
 !i10b 1
-Z57 !s108 1485172381.000000
-Z58 !s90 -reportprogress|300|-explicit|-93|top.vhd|
-Z59 !s107 top.vhd|
+Z59 !s108 1485172381.000000
+Z60 !s90 -reportprogress|300|-explicit|-93|top.vhd|
+Z61 !s107 top.vhd|
 !i113 1
 R13
 R14
 Abehavioral
 R2
 R3
-Z60 DEx4 work 3 top 0 22 MB<4gP_XVVU@[cUObL3V:3
+Z62 DEx4 work 3 top 0 22 MB<4gP_XVVU@[cUObL3V:3
 l66
 L22
 V=;966:QKJ2JR>hWbOZGDo0
@@ -300,21 +302,21 @@ R8
 31
 R21
 !i10b 1
-R57
-R58
 R59
+R60
+R61
 !i113 1
 R13
 R14
 Etop_tb
-Z61 w1485171132
-R46
+Z63 w1485171132
+R49
 R1
 R2
 R3
 R0
-Z62 8top_tb.vhd
-Z63 Ftop_tb.vhd
+Z64 8top_tb.vhd
+Z65 Ftop_tb.vhd
 l0
 L7
 V4NB8cTPC^b[eG]BKz<eK;1
@@ -323,15 +325,15 @@ R8
 31
 R21
 !i10b 1
-R57
-Z64 !s90 -reportprogress|300|-explicit|-93|top_tb.vhd|
-Z65 !s107 top_tb.vhd|
+R59
+Z66 !s90 -reportprogress|300|-explicit|-93|top_tb.vhd|
+Z67 !s107 top_tb.vhd|
 !i113 1
 R13
 R14
 Abehav
-R60
-R46
+R62
+R49
 R1
 R2
 R3
@@ -344,9 +346,9 @@ R8
 31
 R21
 !i10b 1
-R57
-R64
-R65
+R59
+R66
+R67
 !i113 1
 R13
 R14

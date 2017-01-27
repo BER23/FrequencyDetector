@@ -22,12 +22,13 @@ signal s1 : complex :=(0,0);
 signal s2 : complex :=(0,0);
 signal coef : complex :=(to_integer(signed(re_lut(10))),to_integer(signed(im_lut(10))));
 signal data_complex : complex :=(0,0);
-signal concatenated : std_logic_vector(31 downto 0);
+signal data_fixed : std_logic_vector(31 downto 0);
+signal output_fixed : STD_LOGIC_VECTOR (31 downto 0);
 begin
-concatenated <= data&"0000000000000000";
-data_complex.re <= to_integer(signed(concatenated));
 
---output_value <= s1.re
+data_fixed <= data&"0000000000000000";
+data_complex.re <= to_integer(signed(data_fixed));
+
 calculate: process(clk)
 begin
 if clk'event and clk='1' and start='1' then
@@ -40,9 +41,12 @@ if clk'event and clk='1' and start='1' then
 			done <= '0';
 			counter <= counter + 1;
 		end if;
-		s1<=data_complex + coef*s2;
-		s2<=s1;
+		s1 <= data_complex + coef*s2;
+		s2 <= s1;
 	end if;
 end process;
+
+output_fixed <= std_logic_vector(to_signed(s1.re,32));
+output_value <= output_fixed(31 downto 16);
 
 end Behavioral;
