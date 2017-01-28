@@ -4,68 +4,56 @@ use ieee.numeric_std.ALL;
 use IEEE.std_logic_textio.all;
 use std.textio.all;
 
-entity top_tb is
-end entity top_tb;
+entity detector_sdft_tb is
+end entity detector_sdft_tb;
 
-architecture behav of top_tb is
+architecture behav of detector_sdft_tb is
     
 type bits_array is array (0 to 511) of std_logic_vector(15 downto 0);
 
-signal clk_i : std_logic := '0';
-signal start_i : std_logic;
-signal xn_re : std_logic_vector(15 downto 0);
-signal xk_re : std_logic_vector(15 downto 0);
-signal xk_im : std_logic_vector(15 downto 0);
+signal clk : std_logic := '0';
+signal start_i : std_logic := '0';
 signal done : std_logic;
-signal switches : std_logic_vector(3 downto 0);
-signal xn_index : STD_LOGIC_VECTOR(2 DOWNTO 0);
-signal xk_index : STD_LOGIC_VECTOR(2 DOWNTO 0);
+signal data : std_logic_vector(15 downto 0) := (others => '0');
+signal locked_out : std_logic;
+signal output_value_re : std_logic_vector(15 downto 0);
 
 begin
-	UUT : entity work.top
+	UUT : entity work.detector_sdft
 	  PORT MAP (
-		switches => switches,
-		leds => open,
-		clk => clk_i,
+		clk => clk,
 		start => start_i,
-		xn_re => xn_re,
-		xk_re => xk_re,
-		xk_im => xk_im,
+		data => data,
 		done => done,
-		xn_index => xn_index,
-		xk_index => xk_index
+		locked_out => locked_out,
+		output_value_re => output_value_re
 	  );
 	
 	clk_process: process
   	begin
     	wait for 20 ns;    
-    	clk_i <= not clk_i;
+    	clk <= not clk;
   	end process clk_process;
 
-	start_process: process
+  	read_file: process (clk)
+		file file_inputs: text open read_mode is "testbench_table.txt";
+		variable line_inputs: line;
+		variable data_int : integer range -32768 to 32767;
 	begin
-		start_i <= '1', '0' after 50 ns;
-		wait for 800 ns;
-	end process start_process;
+		if clk='1' and clk'event and start_i='1' then
+			if endfile(file_inputs) then
+				--assert false
+				--	report "End of file "
+				--	severity Warning;
+			else
+	        	readline(file_inputs, line_inputs);
+				read(line_inputs, data_int);
+				data <=  std_logic_vector(to_signed(data_int,16));
+			end if;
+		end if;
+    end process read_file;
 	
-	xn_re <= "0000000011111111", "0000000000001111" after 80 ns;
-
---  	read_file: process (start_i)
---		file file_inputs: text open read_mode is "testbench_table.txt";
---		variable line_inputs: line;
---		variable int : integer range -32768 to 32767;
---	begin
---		if start_i='1' and start_i'event then
---			if endfile(file_inputs) then
---				assert false
---					report "End of file "
---					severity Failure;
---			else
---	        	readline(file_inputs, line_inputs);
---				read(line_inputs, int);
---			end if;
---		end if;
---    end process read_file;
+	start_i <= locked_out;
 	
 	sim_end_process: process
 	begin

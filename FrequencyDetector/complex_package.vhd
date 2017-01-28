@@ -10,6 +10,8 @@ package complex_package is
 	
 	function "+" (l : complex; r : complex) return complex;
 	function "*" (l : complex; r : complex) return complex;
+	function amplitude (arg : complex) return signed;
+	
 end complex_package;
 
 package body complex_package is
@@ -31,6 +33,11 @@ package body complex_package is
 		--result.re := to_integer(to_signed((l.re*r.re - l.im*r.im),32) sra 16);
 		--result.im := to_integer(to_signed((l.re*r.im + l.im*r.re),32) sra 16);
 		return result;
+	end function;
+	
+	function amplitude (arg : complex) return signed is
+	begin
+		return(arg.re*arg.re + arg.im*arg.im);
 	end function;
 	
 end complex_package;

@@ -3,7 +3,7 @@ Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
--n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf
 
 Design file:              top.ncd
 Physical constraint file: top.pcf
@@ -39,18 +39,64 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Pad to Pad
----------------+---------------+---------+
-Source Pad     |Destination Pad|  Delay  |
----------------+---------------+---------+
-switches<0>    |leds<0>        |    7.499|
-switches<1>    |leds<1>        |    7.440|
-switches<2>    |leds<2>        |    6.905|
-switches<3>    |leds<3>        |    8.210|
----------------+---------------+---------+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+data<0>     |    8.654(R)|   -4.061(R)|clk_dcm           |   0.000|
+data<1>     |    8.530(R)|   -4.122(R)|clk_dcm           |   0.000|
+data<2>     |    8.038(R)|   -3.678(R)|clk_dcm           |   0.000|
+data<3>     |    8.301(R)|   -4.038(R)|clk_dcm           |   0.000|
+data<4>     |    7.094(R)|   -2.979(R)|clk_dcm           |   0.000|
+data<5>     |    7.328(R)|   -3.368(R)|clk_dcm           |   0.000|
+data<6>     |    7.172(R)|   -3.193(R)|clk_dcm           |   0.000|
+data<7>     |    7.190(R)|   -3.399(R)|clk_dcm           |   0.000|
+data<8>     |    6.951(R)|   -3.073(R)|clk_dcm           |   0.000|
+data<9>     |    6.981(R)|   -3.299(R)|clk_dcm           |   0.000|
+data<10>    |    6.488(R)|   -2.842(R)|clk_dcm           |   0.000|
+data<11>    |    6.579(R)|   -3.247(R)|clk_dcm           |   0.000|
+data<12>    |    6.133(R)|   -2.877(R)|clk_dcm           |   0.000|
+data<13>    |    6.085(R)|   -2.791(R)|clk_dcm           |   0.000|
+data<14>    |    6.092(R)|   -2.869(R)|clk_dcm           |   0.000|
+data<15>    |    5.394(R)|   -2.808(R)|clk_dcm           |   0.000|
+start       |    6.708(R)|   -1.540(R)|clk_dcm           |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+-------------------+------------+------------------+--------+
+                   | clk (edge) |                  | Clock  |
+Destination        |   to PAD   |Internal Clock(s) | Phase  |
+-------------------+------------+------------------+--------+
+done               |    5.241(R)|clk_dcm           |   0.000|
+output_value_re<0> |    5.936(R)|clk_dcm           |   0.000|
+output_value_re<1> |    5.854(R)|clk_dcm           |   0.000|
+output_value_re<2> |    4.695(R)|clk_dcm           |   0.000|
+output_value_re<3> |    6.108(R)|clk_dcm           |   0.000|
+output_value_re<4> |    4.695(R)|clk_dcm           |   0.000|
+output_value_re<5> |    6.140(R)|clk_dcm           |   0.000|
+output_value_re<6> |    5.757(R)|clk_dcm           |   0.000|
+output_value_re<7> |    6.220(R)|clk_dcm           |   0.000|
+output_value_re<8> |    5.565(R)|clk_dcm           |   0.000|
+output_value_re<9> |    5.586(R)|clk_dcm           |   0.000|
+output_value_re<10>|    5.241(R)|clk_dcm           |   0.000|
+output_value_re<11>|    5.481(R)|clk_dcm           |   0.000|
+output_value_re<12>|    4.689(R)|clk_dcm           |   0.000|
+output_value_re<13>|    4.685(R)|clk_dcm           |   0.000|
+output_value_re<14>|    5.752(R)|clk_dcm           |   0.000|
+output_value_re<15>|    4.691(R)|clk_dcm           |   0.000|
+-------------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   16.117|         |         |         |
+---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Jan 23 10:09:21 2017 
+Analysis completed Sat Jan 28 13:16:33 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:

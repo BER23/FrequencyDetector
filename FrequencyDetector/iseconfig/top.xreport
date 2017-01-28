@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-01-24T16:19:37</DateModified>
-  <ModuleName>sdft</ModuleName>
-  <SummaryTimeStamp>2017-01-24T15:52:44</SummaryTimeStamp>
+  <DateModified>2017-01-28T17:20:37</DateModified>
+  <ModuleName>detector_sdft</ModuleName>
+  <SummaryTimeStamp>2017-01-28T16:45:26</SummaryTimeStamp>
   <SavedFilePath>C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/iseconfig/top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector\</ImplementationReportsDirectory>
-  <DateInitialized>2017-01-24T15:52:28</DateInitialized>
+  <DateInitialized>2017-01-28T16:37:40</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

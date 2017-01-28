@@ -1,2 +1,5 @@
-vhdl work "ipcore_dir/fft.vhd"
+vhdl work "sdft_constant_lut.vhd"
+vhdl work "complex_package.vhd"
+vhdl work "sdft.vhd"
+vhdl work "dcm.vhd"
 vhdl work "top.vhd"

@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/paulina/2sem/PUR/projekt/FrequencyDetector/FrequencyDetector/ipcore_dir/fft.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/ipcore_dir/fft.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

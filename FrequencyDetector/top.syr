@@ -98,32 +98,72 @@ Verilog 2001                       : YES
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
----- Other Options
-Cores Search Directories           : {"ipcore_dir"  }
-
 =========================================================================
 
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3498 - No primary, secondary unit in the file "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/ipcore_dir/fft.vhd. Ignore this file from project file "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top_vhdl.prj".
-Compiling vhdl file "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" in Library work.
+Compiling vhdl file "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/complex_package.vhd" in Library work.
+Architecture complex_package of Entity complex_package is up to date.
+Compiling vhdl file "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft_constant_lut.vhd" in Library work.
+Architecture sdft_constant_lut of Entity sdft_constant_lut is up to date.
+Compiling vhdl file "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/dcm.vhd" in Library work.
+Architecture behavioral of Entity dcm is up to date.
+Compiling vhdl file "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd" in Library work.
+Architecture behavioral of Entity sdft is up to date.
+Compiling vhdl file "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/top.vhd" in Library work.
 Entity <top> compiled.
 Entity <top> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <top> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <top> in library <work> (architecture <behavioral>) with generics.
+	FS = 20000
+	FX = 5000
+
+Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <sdft> in library <work> (architecture <Behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <top> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" line 54: Instantiating black box module <fft>.
+Analyzing generic Entity <top> in library <work> (Architecture <behavioral>).
+	FS = 20000
+	FX = 5000
+WARNING:Xst:753 - "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/top.vhd" line 37: Unconnected output port 'CLKFX_OUT' of component 'dcm'.
+WARNING:Xst:753 - "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/top.vhd" line 37: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'dcm'.
 Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <dcm> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <dcm>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <dcm>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <dcm>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <dcm>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLKFX_DIVIDE =  5" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <dcm>.
+Entity <dcm> analyzed. Unit <dcm> generated.
+
+Analyzing Entity <sdft> in library <work> (Architecture <Behavioral>).
+INFO:Xst:2679 - Register <s2.re> in unit <sdft> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s2.im> in unit <sdft> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+Entity <sdft> analyzed. Unit <sdft> generated.
 
 
 =========================================================================
@@ -132,60 +172,179 @@ Entity <top> analyzed. Unit <top> generated.
 
 Performing bidirectional port resolution...
 
+Synthesizing Unit <sdft>.
+    Related source file is "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd".
+WARNING:Xst:647 - Input <line_to_find> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <dft_points> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <s2.re> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <s2.im> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <output_fixed_re<15:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <output_fixed_im<15:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <data_complex.im> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:653 - Signal <coef.re> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000001111110110101011.
+WARNING:Xst:653 - Signal <coef.im> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000010001001110100.
+    Found 1-bit register for signal <done>.
+    Found 9-bit up counter for signal <counter>.
+    Found 64-bit adder for signal <im64$add0000> created at line 30.
+    Found 32x32-bit multiplier for signal <im64$mult0000> created at line 30.
+    Found 32x32-bit multiplier for signal <im64$mult0001> created at line 30.
+    Found 32x32-bit multiplier for signal <re64$mult0000> created at line 29.
+    Found 32x32-bit multiplier for signal <re64$mult0001> created at line 29.
+    Found 64-bit subtractor for signal <re64$sub0000> created at line 29.
+    Found 32-bit register for signal <s1.im>.
+    Found 32-bit adder for signal <s1.im$add0000> created at line 21.
+    Found 32-bit register for signal <s1.re>.
+    Found 32-bit adder for signal <s1.re$add0000> created at line 21.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  65 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Multiplier(s).
+Unit <sdft> synthesized.
+
+
+Synthesizing Unit <dcm>.
+    Related source file is "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/dcm.vhd".
+Unit <dcm> synthesized.
+
+
 Synthesizing Unit <top>.
-    Related source file is "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd".
-WARNING:Xst:646 - Signal <xn_index> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <xk_re> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <xk_index> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <xk_im> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <rfd> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <edone> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <dv> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <done> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <busy> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Related source file is "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/top.vhd".
+WARNING:Xst:646 - Signal <output_value_im> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <line_to_find> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
 Unit <top> synthesized.
 
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Multipliers                                          : 4
+ 32x32-bit multiplier                                  : 4
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 2
+ 64-bit adder                                          : 1
+ 64-bit subtractor                                     : 1
+# Counters                                             : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 3
+ 1-bit register                                        : 1
+ 32-bit register                                       : 2
+
 =========================================================================
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-Reading core <ipcore_dir/fft.ngc>.
-Reading Secure Unit <blk00000038>.
-Loading core <fft> for timing and area information for instance <your_instance_name>.
+WARNING:Xst:79 - Model 'dcm' has different characteristics in destination library
+WARNING:Xst:80 - Model name has been changed to 'dcm1'
+
+Synthesizing (advanced) Unit <sdft>.
+	Found pipelined multiplier on signal <im64_mult0001>:
+		- 1 pipeline level(s) found in a register on signal <s1_re>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <im64_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <s1_im>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <re64_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <s1_re>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <re64_mult0001>:
+		- 1 pipeline level(s) found in a register on signal <s1_im>.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_im64_mult0001 by adding 3 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_im64_mult0000 by adding 3 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_re64_mult0000 by adding 3 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_re64_mult0001 by adding 3 register level(s).
+Unit <sdft> synthesized (advanced).
+WARNING:Xst:2677 - Node <s1.re_0> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_1> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_2> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_3> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_4> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_5> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_6> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_7> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_8> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_9> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_10> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_11> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_12> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_13> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_14> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.re_15> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_0> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_1> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_2> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_3> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_4> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_5> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_6> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_7> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_8> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_9> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_10> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_11> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_12> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_13> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_14> of sequential type is unconnected in block <sdft>.
+WARNING:Xst:2677 - Node <s1.im_15> of sequential type is unconnected in block <sdft>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Multipliers                                          : 4
+ 32x32-bit registered multiplier                       : 4
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 2
+ 48-bit adder                                          : 1
+ 48-bit subtractor                                     : 1
+# Counters                                             : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:2170 - Unit blk00000039 : the following signal(s) form a combinatorial loop: clk.
-WARNING:Xst:2170 - Unit blk00000038 : the following signal(s) form a combinatorial loop: clk.
-WARNING:Xst:2016 - Found a loop when searching source clock on port 'clk:clk'
-Last warning will be issued only once.
 
 Optimizing unit <top> ...
 
+Optimizing unit <sdft> ...
+WARNING:Xst:2677 - Node <sdft/s1.re_31> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_30> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_23> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_22> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_21> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_20> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_19> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_18> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_17> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <sdft/s1.re_16> of sequential type is unconnected in block <top>.
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 15.
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 2.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 26
+ Flip-Flops                                            : 26
+
 =========================================================================
 
 =========================================================================
@@ -210,35 +369,33 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 8
+# IOs                              : 36
 
 Cell Usage :
-# BELS                             : 1092
-#      GND                         : 3
-#      INV                         : 39
-#      LUT1                        : 50
-#      LUT2                        : 104
-#      LUT2_D                      : 2
-#      LUT3                        : 257
-#      LUT4                        : 166
-#      MUXCY                       : 220
-#      MUXF5                       : 57
-#      VCC                         : 3
-#      XORCY                       : 191
-# FlipFlops/Latches                : 851
-#      FD                          : 51
-#      FDE                         : 342
-#      FDR                         : 11
-#      FDRE                        : 446
-#      FDS                         : 1
-# Shift Registers                  : 3
-#      SRL16                       : 2
-#      SRL16E                      : 1
-# IO Buffers                       : 8
-#      IBUF                        : 4
-#      OBUF                        : 4
-# MULTs                            : 4
-#      MULT18X18SIO                : 4
+# BELS                             : 696
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 8
+#      LUT2                        : 235
+#      LUT3                        : 1
+#      LUT4                        : 2
+#      MUXCY                       : 235
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 211
+# FlipFlops/Latches                : 26
+#      FDE                         : 17
+#      FDRE                        : 9
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 36
+#      IBUF                        : 17
+#      IBUFG                       : 1
+#      OBUF                        : 18
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# MULTs                            : 8
+#      MULT18X18SIO                : 8
 =========================================================================
 
 Device utilization summary:
@@ -246,14 +403,14 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      704  out of   4656    15%  
- Number of Slice Flip Flops:            851  out of   9312     9%  
- Number of 4 input LUTs:                621  out of   9312     6%  
-    Number used as logic:               618
-    Number used as Shift registers:       3
- Number of IOs:                           8
- Number of bonded IOBs:                   8  out of    232     3%  
- Number of MULT18X18SIOs:                 4  out of     20    20%  
+ Number of Slices:                      126  out of   4656     2%  
+ Number of Slice Flip Flops:             26  out of   9312     0%  
+ Number of 4 input LUTs:                247  out of   9312     2%  
+ Number of IOs:                          36
+ Number of bonded IOBs:                  36  out of    232    15%  
+ Number of MULT18X18SIOs:                 8  out of     20    40%  
+ Number of GCLKs:                         2  out of     24     8%  
+ Number of DCMs:                          1  out of      4    25%  
 
 ---------------------------
 Partition Resource Summary:
@@ -273,15 +430,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+----------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                  | Load  |
------------------------------------+----------------------------------------+-------+
-clk(clk_INV_0:O)                   | NONE(*)(your_instance_name/blk0000000a)| 1366  |
------------------------------------+----------------------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+--------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)    | Load  |
+-----------------------------------+--------------------------+-------+
+clk                                | Inst_dcm/DCM_SP_INST:CLK0| 34    |
+-----------------------------------+--------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -291,10 +444,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 6.152ns (Maximum Frequency: 162.549MHz)
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: 4.910ns
+   Minimum period: 15.044ns (Maximum Frequency: 66.472MHz)
+   Minimum input arrival time before clock: 5.591ns
+   Maximum output required time after clock: 4.283ns
+   Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
@@ -302,73 +455,127 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.152ns (frequency: 162.549MHz)
-  Total number of paths / destination ports: 11055 / 1499
+  Clock period: 15.044ns (frequency: 66.472MHz)
+  Total number of paths / destination ports: 988744 / 175
 -------------------------------------------------------------------------
-Delay:               6.152ns (Levels of Logic = 19)
-  Source:            your_instance_name/blk000004e4/blk000004eb (FF)
-  Destination:       your_instance_name/blk000006e1 (FF)
-  Source Clock:      clk falling
-  Destination Clock: clk falling
+Delay:               15.044ns (Levels of Logic = 36)
+  Source:            sdft/Mmult_re64_mult0000 (MULT)
+  Destination:       sdft/Mmult_im64_mult00011 (MULT)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
 
-  Data Path: your_instance_name/blk000004e4/blk000004eb to your_instance_name/blk000006e1
+  Data Path: sdft/Mmult_re64_mult0000 to sdft/Mmult_im64_mult00011
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              24   0.591   1.252  blk000004eb (COSINE<1>)
-     end scope: 'blk000004e4'
-     INV:I->O              1   0.704   0.000  blk00000b63 (sig000006a3)
-     MUXCY:S->O            1   0.464   0.000  blk000006e0 (sig000006a2)
-     MUXCY:CI->O           1   0.059   0.000  blk000006de (sig000006a1)
-     MUXCY:CI->O           1   0.059   0.000  blk000006dc (sig000006a0)
-     MUXCY:CI->O           1   0.059   0.000  blk000006da (sig0000069f)
-     MUXCY:CI->O           1   0.059   0.000  blk000006d8 (sig0000069e)
-     MUXCY:CI->O           1   0.059   0.000  blk000006d6 (sig0000069d)
-     MUXCY:CI->O           1   0.059   0.000  blk000006d4 (sig0000069b)
-     MUXCY:CI->O           1   0.059   0.000  blk000006d2 (sig0000069a)
-     MUXCY:CI->O           1   0.059   0.000  blk000006d0 (sig00000698)
-     MUXCY:CI->O           1   0.059   0.000  blk000006ce (sig00000697)
-     MUXCY:CI->O           1   0.059   0.000  blk000006cc (sig00000695)
-     MUXCY:CI->O           1   0.059   0.000  blk000006ca (sig00000693)
-     MUXCY:CI->O           1   0.059   0.000  blk000006c8 (sig00000692)
-     MUXCY:CI->O           1   0.059   0.000  blk000006c6 (sig00000690)
-     MUXCY:CI->O           0   0.059   0.000  blk000006c4 (sig0000068e)
-     XORCY:CI->O           1   0.804   0.499  blk000006c2 (sig000006e3)
-     LUT2:I1->O            1   0.704   0.000  blk00000ac0 (sig000006d3)
-     FDE:D                     0.308          blk000006e1
+     MULT18X18SIO:CLK->P17    1   4.962   0.499  sdft/Mmult_re64_mult0000 (sdft/Mmult_re64_mult0000_P_to_Adder_A_17)
+     LUT2:I1->O            1   0.704   0.000  sdft/Mmult_re64_mult00000_Madd_lut<17> (sdft/Mmult_re64_mult00000_Madd_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  sdft/Mmult_re64_mult00000_Madd_cy<17> (sdft/Mmult_re64_mult00000_Madd_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<18> (sdft/Mmult_re64_mult00000_Madd_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<19> (sdft/Mmult_re64_mult00000_Madd_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<20> (sdft/Mmult_re64_mult00000_Madd_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<21> (sdft/Mmult_re64_mult00000_Madd_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<22> (sdft/Mmult_re64_mult00000_Madd_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<23> (sdft/Mmult_re64_mult00000_Madd_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<24> (sdft/Mmult_re64_mult00000_Madd_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<25> (sdft/Mmult_re64_mult00000_Madd_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<26> (sdft/Mmult_re64_mult00000_Madd_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<27> (sdft/Mmult_re64_mult00000_Madd_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<28> (sdft/Mmult_re64_mult00000_Madd_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<29> (sdft/Mmult_re64_mult00000_Madd_cy<29>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<30> (sdft/Mmult_re64_mult00000_Madd_cy<30>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<31> (sdft/Mmult_re64_mult00000_Madd_cy<31>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<32> (sdft/Mmult_re64_mult00000_Madd_cy<32>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<33> (sdft/Mmult_re64_mult00000_Madd_cy<33>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<34> (sdft/Mmult_re64_mult00000_Madd_cy<34>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<35> (sdft/Mmult_re64_mult00000_Madd_cy<35>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<36> (sdft/Mmult_re64_mult00000_Madd_cy<36>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<37> (sdft/Mmult_re64_mult00000_Madd_cy<37>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<38> (sdft/Mmult_re64_mult00000_Madd_cy<38>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<39> (sdft/Mmult_re64_mult00000_Madd_cy<39>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<40> (sdft/Mmult_re64_mult00000_Madd_cy<40>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<41> (sdft/Mmult_re64_mult00000_Madd_cy<41>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<42> (sdft/Mmult_re64_mult00000_Madd_cy<42>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<43> (sdft/Mmult_re64_mult00000_Madd_cy<43>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult00000_Madd_cy<44> (sdft/Mmult_re64_mult00000_Madd_cy<44>)
+     XORCY:CI->O           1   0.804   0.595  sdft/Mmult_re64_mult00000_Madd_xor<45> (sdft/re64_mult0000<45>)
+     LUT2:I0->O            1   0.704   0.000  sdft/Msub_re64_sub0000_Madd_lut<45> (sdft/Msub_re64_sub0000_Madd_lut<45>)
+     MUXCY:S->O            1   0.464   0.000  sdft/Msub_re64_sub0000_Madd_cy<45> (sdft/Msub_re64_sub0000_Madd_cy<45>)
+     XORCY:CI->O           1   0.804   0.499  sdft/Msub_re64_sub0000_Madd_xor<46> (sdft/re64_sub0000<46>)
+     LUT2:I1->O            1   0.704   0.000  sdft/Madd_s1.re_add0000_lut<30> (sdft/Madd_s1.re_add0000_lut<30>)
+     MUXCY:S->O            0   0.464   0.000  sdft/Madd_s1.re_add0000_cy<30> (sdft/Madd_s1.re_add0000_cy<30>)
+     XORCY:CI->O           8   0.804   0.757  sdft/Madd_s1.re_add0000_xor<31> (sdft/s1_re_add0000<31>)
+     MULT18X18SIO:A14          0.223          sdft/Mmult_re64_mult00001
     ----------------------------------------
-    Total                      6.152ns (4.401ns logic, 1.751ns route)
-                                       (71.5% logic, 28.5% route)
+    Total                     15.044ns (12.694ns logic, 2.350ns route)
+                                       (84.4% logic, 15.6% route)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 4 / 4
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 741 / 81
 -------------------------------------------------------------------------
-Delay:               4.910ns (Levels of Logic = 2)
-  Source:            switches<3> (PAD)
-  Destination:       leds<3> (PAD)
+Offset:              5.591ns (Levels of Logic = 18)
+  Source:            data<0> (PAD)
+  Destination:       sdft/Mmult_im64_mult00011 (MULT)
+  Destination Clock: clk rising
 
-  Data Path: switches<3> to leds<3>
+  Data Path: data<0> to sdft/Mmult_im64_mult00011
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.218   0.420  switches_3_IBUF (leds_3_OBUF)
-     OBUF:I->O                 3.272          leds_3_OBUF (leds<3>)
+     IBUF:I->O             1   1.218   0.595  data_0_IBUF (data_0_IBUF)
+     LUT2:I0->O            1   0.704   0.000  sdft/Madd_s1.re_add0000_lut<16> (sdft/Madd_s1.re_add0000_lut<16>)
+     MUXCY:S->O            1   0.464   0.000  sdft/Madd_s1.re_add0000_cy<16> (sdft/Madd_s1.re_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<17> (sdft/Madd_s1.re_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<18> (sdft/Madd_s1.re_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<19> (sdft/Madd_s1.re_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<20> (sdft/Madd_s1.re_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<21> (sdft/Madd_s1.re_add0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<22> (sdft/Madd_s1.re_add0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<23> (sdft/Madd_s1.re_add0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<24> (sdft/Madd_s1.re_add0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<25> (sdft/Madd_s1.re_add0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<26> (sdft/Madd_s1.re_add0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<27> (sdft/Madd_s1.re_add0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<28> (sdft/Madd_s1.re_add0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  sdft/Madd_s1.re_add0000_cy<29> (sdft/Madd_s1.re_add0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  sdft/Madd_s1.re_add0000_cy<30> (sdft/Madd_s1.re_add0000_cy<30>)
+     XORCY:CI->O           8   0.804   0.757  sdft/Madd_s1.re_add0000_xor<31> (sdft/s1_re_add0000<31>)
+     MULT18X18SIO:A14          0.223          sdft/Mmult_re64_mult00001
     ----------------------------------------
-    Total                      4.910ns (4.490ns logic, 0.420ns route)
-                                       (91.4% logic, 8.6% route)
+    Total                      5.591ns (4.239ns logic, 1.352ns route)
+                                       (75.8% logic, 24.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            sdft/done (FF)
+  Destination:       done (PAD)
+  Source Clock:      clk rising
+
+  Data Path: sdft/done to done
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.420  sdft/done (sdft/done)
+     OBUF:I->O                 3.272          done_OBUF (done)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.86 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.72 secs
  
 --> 
 
-Total memory usage is 283580 kilobytes
+Total memory usage is 267392 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   13 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   63 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 

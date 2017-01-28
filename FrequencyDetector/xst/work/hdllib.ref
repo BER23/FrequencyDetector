@@ -1,6 +1,12 @@
-PB complex_package complex_package C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/complex_package.vhd sub00/vhpl03 1485271227
-PH complex_package NULL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/complex_package.vhd sub00/vhpl02 1485271226
-EN top NULL "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" sub00/vhpl00 1485162532
-AR sdft behavioral C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd sub00/vhpl05 1485269556
-EN sdft NULL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd sub00/vhpl04 1485269555
-AR top behavioral "C:/Users/User/Desktop/Politechnika/PUR projekt/FrequencyDetector/top.vhd" sub00/vhpl01 1485162533
+AR dcm behavioral C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/dcm.vhd sub00/vhpl09 1485620910
+EN dcm NULL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/dcm.vhd sub00/vhpl08 1485620909
+PB complex_package complex_package C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/complex_package.vhd sub00/vhpl03 1485620906
+PH complex_package NULL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/complex_package.vhd sub00/vhpl02 1485620905
+PB sdft_constant_lut sdft_constant_lut C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft_constant_lut.vhd sub00/vhpl07 1485620908
+EN top NULL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/top.vhd sub00/vhpl00 1485605772
+AR sdft behavioral C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd sub00/vhpl05 1485620912
+EN sdft NULL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd sub00/vhpl04 1485620911
+EN detector_sdft NULL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/detector_sdft.vhd sub00/vhpl10 1485620913
+PH sdft_constant_lut NULL C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft_constant_lut.vhd sub00/vhpl06 1485620907
+AR top behavioral C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/top.vhd sub00/vhpl01 1485605773
+AR detector_sdft behavioral C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/detector_sdft.vhd sub00/vhpl11 1485620914

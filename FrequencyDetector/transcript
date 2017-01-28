@@ -1,54 +1,35 @@
 # Reading C:/Modeltech_pe_edu_10.4a/tcl/vsim/pref.tcl
-# do {sdft_tb.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
+# do {detector_sdft_tb.tdo}
 # Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 22:18:03 on Jan 27,2017
-# vcom -reportprogress 300 -explicit -93 sdft_constant_lut.vhd 
+# Start time: 17:29:37 on Jan 28,2017
+# vcom -reportprogress 300 -explicit -93 netgen/par/detector_sdft_timesim.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling package sdft_constant_lut
-# -- Compiling package body sdft_constant_lut
-# -- Loading package sdft_constant_lut
-# End time: 22:18:04 on Jan 27,2017, Elapsed time: 0:00:01
+# -- Loading package VITAL_Timing
+# -- Loading package VCOMPONENTS
+# -- Loading package VITAL_Primitives
+# -- Loading package VPACKAGE
+# -- Compiling entity detector_sdft
+# -- Compiling architecture Structure of detector_sdft
+# End time: 17:29:38 on Jan 28,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 22:18:04 on Jan 27,2017
-# vcom -reportprogress 300 -explicit -93 complex_package.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling package complex_package
-# -- Compiling package body complex_package
-# -- Loading package complex_package
-# End time: 22:18:04 on Jan 27,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 22:18:04 on Jan 27,2017
-# vcom -reportprogress 300 -explicit -93 sdft.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package complex_package
-# -- Loading package sdft_constant_lut
-# -- Compiling entity sdft
-# -- Compiling architecture Behavioral of sdft
-# End time: 22:18:05 on Jan 27,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 22:18:05 on Jan 27,2017
-# vcom -reportprogress 300 -explicit -93 sdft_tb.vhd 
+# Start time: 17:29:38 on Jan 28,2017
+# vcom -reportprogress 300 -explicit -93 detector_sdft_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity sdft_tb
-# -- Compiling architecture behavior of sdft_tb
-# End time: 22:18:05 on Jan 27,2017, Elapsed time: 0:00:00
+# -- Compiling entity detector_sdft_tb
+# -- Compiling architecture behav of detector_sdft_tb
+# -- Loading package VITAL_Timing
+# -- Loading package VCOMPONENTS
+# -- Loading package VITAL_Primitives
+# -- Loading package VPACKAGE
+# -- Loading entity detector_sdft
+# End time: 17:29:38 on Jan 28,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # //  ModelSim PE Student Edition 10.4a Apr  7 2015 
 # //
@@ -68,116 +49,533 @@
 # // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
 # // FOR HIGHER EDUCATION PURPOSES ONLY
 # //
-# vsim -gui -do "do {sdft_tb.fdo}" 
-# Start time: 22:18:05 on Jan 27,2017
+# vsim -gui -do "do {detector_sdft_tb.tdo}" 
+# Start time: 17:29:38 on Jan 28,2017
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
 # Loading ieee.std_logic_textio(body)
-# Loading work.sdft_tb(behavior)
-# Loading work.complex_package(body)
-# Loading work.sdft_constant_lut(body)
-# Loading work.sdft(behavioral)
+# Loading vital2000.vital_timing(body)
+# Loading simprim.vcomponents
+# Loading vital2000.vital_primitives(body)
+# Loading simprim.vpackage(body)
+# Loading work.detector_sdft_tb(behav)
+# SDF 10.4a Compiler 2015.03 Apr  7 2015
+# 
+# Loading work.detector_sdft(structure)
+# Loading simprim.x_mux2(x_mux2_v)
+# Loading simprim.x_buf(x_buf_v)
+# Loading simprim.x_and2(x_and2_v)
+# Loading simprim.x_xor2(x_xor2_v)
+# Loading simprim.x_ff(x_ff_v)
+# Loading simprim.x_lut4(x_lut4_v)
+# Loading simprim.x_zero(x_zero_v)
+# Loading simprim.x_one(x_one_v)
+# Loading simprim.x_obuf(x_obuf_v)
+# Loading simprim.x_bufgmux(x_bufgmux_v)
+# Loading simprim.x_inv(x_inv_v)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading simprim.x_mult18x18sio(x_mult18x18sio_v)
+# Loading simprim.x_dcm_sp(x_dcm_sp_v)
+# Loading simprim.x_dcm_sp_clock_divide_by_2(x_dcm_sp_clock_divide_by_2_v)
+# Loading simprim.x_dcm_sp_maximum_period_check(x_dcm_sp_maximum_period_check_v)
+# Loading simprim.x_dcm_sp_clock_lost(x_dcm_sp_clock_lost_v)
+# Loading simprim.x_sff(x_sff_v)
+# Loading simprim.x_roc(x_roc_v)
+# Loading simprim.x_toc(x_toc_v)
+# Loading instances from netgen/par/detector_sdft_timesim.sdf
+# Loading timing data from netgen/par/detector_sdft_timesim.sdf
+# ** Warning: Design size of 283440 statements or 4073 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
+# Expect performance to be quite adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /detector_sdft_tb File: detector_sdft_tb.vhd
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: User  Hostname: ZNAK-LAPTOP  ProcessID: 12136
 # 
-#           Attempting to use alternate WLF file "./wlft5b3yv6".
+#           Attempting to use alternate WLF file "./wlftn6a47c".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft5b3yv6
+#           Using alternate file: ./wlftn6a47c
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-add wave -position insertpoint sim:/sdft_tb/uut/*
-restart
-run -all
-# ** Failure: End of simulation at time 100000000 ps
-#    Time: 100 us  Iteration: 0  Process: /sdft_tb/sim_end_process File: sdft_tb.vhd
-# Break in Process sim_end_process at sdft_tb.vhd line 99
-do {sdft_tb.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 22:23:04 on Jan 27,2017
-# vcom -reportprogress 300 -explicit -93 sdft_constant_lut.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling package sdft_constant_lut
-# -- Compiling package body sdft_constant_lut
-# -- Loading package sdft_constant_lut
-# End time: 22:23:04 on Jan 27,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 22:23:04 on Jan 27,2017
-# vcom -reportprogress 300 -explicit -93 complex_package.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling package complex_package
-# -- Compiling package body complex_package
-# -- Loading package complex_package
-# End time: 22:23:05 on Jan 27,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 22:23:05 on Jan 27,2017
-# vcom -reportprogress 300 -explicit -93 sdft.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package complex_package
-# -- Loading package sdft_constant_lut
-# -- Compiling entity sdft
-# -- Compiling architecture Behavioral of sdft
-# End time: 22:23:05 on Jan 27,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 22:23:05 on Jan 27,2017
-# vcom -reportprogress 300 -explicit -93 sdft_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity sdft_tb
-# -- Compiling architecture behavior of sdft_tb
-# End time: 22:23:06 on Jan 27,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 22:23:20 on Jan 27,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_textio(body)
-# Loading work.sdft_tb(behavior)
-# Loading work.complex_package(body)
-# Loading work.sdft_constant_lut(body)
-# Loading work.sdft(behavioral)
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-# 
-#           File in use by: User  Hostname: ZNAK-LAPTOP  ProcessID: 12136
-# 
-#           Attempting to use alternate WLF file "./wlfttb2mje".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-# 
-#           Using alternate file: ./wlfttb2mje
-# 
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-add wave -position insertpoint sim:/sdft_tb/uut/*
-run -all
-# ** Failure: End of simulation at time 100000000 ps
-#    Time: 100 us  Iteration: 0  Process: /sdft_tb/sim_end_process File: sdft_tb.vhd
-# Break in Process sim_end_process at sdft_tb.vhd line 99
-restart
-run -all
-# ** Failure: End of simulation at time 100000000 ps
-#    Time: 100 us  Iteration: 0  Process: /sdft_tb/sim_end_process File: sdft_tb.vhd
-# Break in Process sim_end_process at sdft_tb.vhd line 99
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 920 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 932 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 955 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 961 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 962 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 971 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 974 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 977 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 980 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 986 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 990 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 994 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1025 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1054 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1210 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1214 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1218 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1230 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1244 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1253 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1259 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1260 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1262 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1264 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1269 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1270 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1272 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1275 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1278 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1281 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1284 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1288 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1292 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1311 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1319 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1323 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1333 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1339 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1352 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1358 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1386 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1389 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1398 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1405 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1414 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1421 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1508 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1512 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1532 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1542 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1546 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1560 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1562 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1568 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1568 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1579 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1609 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1617 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1631 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1631 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1637 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1656 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1683 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1684 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1687 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1696 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1702 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1703 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1712 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1719 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1721 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1725 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1806 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1830 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1844 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1866 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1899 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1929 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1947 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1950 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1951 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1952 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1953 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1953 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1954 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1962 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1963 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1970 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1980 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1981 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1982 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1985 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1987 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1991 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1993 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1996 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1997 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2 ns  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2003 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2016 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2019 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2023 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2041 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2044 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2045 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2054 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2068 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2077 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2079 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2080 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2083 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2098 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2102 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2104 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2183 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2197 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2202 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2207 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2216 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2245 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2248 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2249 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2250 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2251 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2251 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2252 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2260 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2261 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2268 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2278 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2280 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2283 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2285 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2289 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2291 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2294 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2295 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2295 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2298 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2299 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2301 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2314 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2318 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2320 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2339 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2342 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2343 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2343 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2352 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2366 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2375 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2377 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2378 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2381 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2387 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2396 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_re64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2400 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2430 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2443 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2472 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2473 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2481 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2484 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2500 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2505 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2514 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2519 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2525 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2530 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2535 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2552 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2554 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2556 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2571 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2593 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2596 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2597 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2616 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2616 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2618 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2641 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2668 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2670 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2677 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2685 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2688 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2695 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2714 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2726 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2728 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2741 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2760 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2770 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2771 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2782 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2817 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2823 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2828 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2833 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2843 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2850 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2852 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2854 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2869 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2886 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2914 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2966 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2968 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2975 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0000_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2986 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2993 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3012 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3024 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3058 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3141 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_01
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3184 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3184 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3284 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3352 ps  Iteration: 4  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3482 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3582 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3650 ps  Iteration: 3  Instance: /detector_sdft_tb/UUT/sdft_Mmult_im64_mult0001_submult_11
