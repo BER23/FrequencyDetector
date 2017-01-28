@@ -9,33 +9,33 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sat Jan 28 17:28:39 2017
+Mapped Date    : Sat Jan 28 20:52:05 2017
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:            74 out of   9,312    1%
-  Number of 4 input LUTs:               422 out of   9,312    4%
+  Number of Slice Flip Flops:            75 out of   9,312    1%
+  Number of 4 input LUTs:               464 out of   9,312    4%
 Logic Distribution:
-  Number of occupied Slices:            221 out of   4,656    4%
-    Number of Slices containing only related logic:     221 out of     221 100%
-    Number of Slices containing unrelated logic:          0 out of     221   0%
+  Number of occupied Slices:            244 out of   4,656    5%
+    Number of Slices containing only related logic:     244 out of     244 100%
+    Number of Slices containing unrelated logic:          0 out of     244   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         430 out of   9,312    4%
-    Number used as logic:               422
+  Total Number of 4 input LUTs:         472 out of   9,312    5%
+    Number used as logic:               464
     Number used as a route-thru:          8
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 36 out of     232   15%
-  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of bonded IOBs:                 37 out of     232   15%
+  Number of BUFGMUXs:                     3 out of      24   12%
   Number of DCMs:                         1 out of       4   25%
-  Number of MULT18X18SIOs:               16 out of      20   80%
+  Number of MULT18X18SIOs:               18 out of      20   90%
 
-Average Fanout of Non-Clock Nets:                1.13
+Average Fanout of Non-Clock Nets:                1.17
 
 Peak Memory Usage:  329 MB
 Total REAL time to MAP completion:  2 secs 
@@ -80,6 +80,15 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:LIT:175 - Clock buffer is designated to drive clock loads. BUFGMUX
+   symbol "physical_group_enable_BUFGP/enable_BUFGP/BUFG" (output
+   signal=enable_BUFGP) has a mix of clock and non-clock loads. Some of the
+   non-clock loads are (maximum of 5 listed):
+   Pin CE of sdft/s1.re_0
+   Pin CE of sdft/s1.re_1
+   Pin CE of sdft/s1.re_2
+   Pin CE of sdft/s1.re_3
+   Pin CE of sdft/s1.re_4
 
 Section 3 - Informational
 -------------------------
@@ -87,33 +96,24 @@ INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
    can be dramatically reduced by designating them as fast outputs.
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp Inst_dcm/DCM_SP_INST,
+   consult the device Interactive Data Sheet.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   1 block(s) removed
-   2 block(s) optimized away
-   1 signal(s) removed
+   5 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
-
-The trimmed logic report below shows the logic removed from your design due to
-sourceless or loadless signals, and VCC or ground connections.  If the removal
-of a signal or symbol results in the subsequent removal of an additional signal
-or symbol, the message explaining that second removal will be indented.  This
-indentation will be repeated as a chain of related logic is removed.
-
-To quickly locate the original cause for the removal of a chain of logic, look
-above the place where that logic is listed in the trimming report, then locate
-the lines that are least indented (begin at the leftmost edge).
-
-Loadless block "Inst_dcm/CLKFX_BUFG_INST" (CKBUF) removed.
- The signal "Inst_dcm/CLKFX_BUF" is loadless and has been removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
+GND 		Inst_dcm/XST_GND
+GND 		sdft/XST_GND
+VCC 		sdft/XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -142,6 +142,7 @@ Section 6 - IOB Properties
 | data<13>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | data<14>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | data<15>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| detected                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | done                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | enable                             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | locked_out                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |

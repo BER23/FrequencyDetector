@@ -1,4 +1,8 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Jan 28 17:28:40 2017
+// Written by: Map P.20131013 on Sat Jan 28 20:52:07 2017
 //! **************************************************************************
+
+SCHEMATIC START;
+NET "enable_BUFGP/IBUFG" BEL "enable_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
 

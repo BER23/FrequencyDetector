@@ -45,23 +45,23 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-data<0>     |    6.110(R)|   -2.466(R)|clk_dcm           |   0.000|
-data<1>     |    6.189(R)|   -2.690(R)|clk_dcm           |   0.000|
-data<2>     |    6.246(R)|   -2.679(R)|clk_dcm           |   0.000|
-data<3>     |    6.142(R)|   -2.756(R)|clk_dcm           |   0.000|
-data<4>     |    5.549(R)|   -2.226(R)|clk_dcm           |   0.000|
-data<5>     |    6.138(R)|   -2.858(R)|clk_dcm           |   0.000|
-data<6>     |    6.027(R)|   -2.712(R)|clk_dcm           |   0.000|
-data<7>     |    5.608(R)|   -2.538(R)|clk_dcm           |   0.000|
-data<8>     |    5.614(R)|   -2.488(R)|clk_dcm           |   0.000|
-data<9>     |    5.600(R)|   -2.638(R)|clk_dcm           |   0.000|
-data<10>    |    5.565(R)|   -2.553(R)|clk_dcm           |   0.000|
-data<11>    |    6.201(R)|   -3.222(R)|clk_dcm           |   0.000|
-data<12>    |    5.021(R)|   -2.220(R)|clk_dcm           |   0.000|
-data<13>    |    6.366(R)|   -3.457(R)|clk_dcm           |   0.000|
-data<14>    |    5.403(R)|   -2.776(R)|clk_dcm           |   0.000|
-data<15>    |    4.855(R)|   -2.829(R)|clk_dcm           |   0.000|
-enable      |    9.842(R)|   -2.325(R)|clk_dcm           |   0.000|
+data<0>     |    6.169(R)|   -2.546(R)|clk_dcm           |   0.000|
+data<1>     |    5.943(R)|   -2.631(R)|clk_dcm           |   0.000|
+data<2>     |    5.932(R)|   -2.450(R)|clk_dcm           |   0.000|
+data<3>     |    5.478(R)|   -2.352(R)|clk_dcm           |   0.000|
+data<4>     |    5.516(R)|   -2.212(R)|clk_dcm           |   0.000|
+data<5>     |    5.813(R)|   -2.715(R)|clk_dcm           |   0.000|
+data<6>     |    5.457(R)|   -2.255(R)|clk_dcm           |   0.000|
+data<7>     |    5.775(R)|   -2.776(R)|clk_dcm           |   0.000|
+data<8>     |    6.379(R)|   -3.088(R)|clk_dcm           |   0.000|
+data<9>     |    5.642(R)|   -2.764(R)|clk_dcm           |   0.000|
+data<10>    |    5.275(R)|   -2.294(R)|clk_dcm           |   0.000|
+data<11>    |    5.066(R)|   -2.394(R)|clk_dcm           |   0.000|
+data<12>    |    4.888(R)|   -2.080(R)|clk_dcm           |   0.000|
+data<13>    |    6.005(R)|   -3.239(R)|clk_dcm           |   0.000|
+data<14>    |    4.821(R)|   -2.336(R)|clk_dcm           |   0.000|
+data<15>    |    4.204(R)|   -2.308(R)|clk_dcm           |   0.000|
+enable      |   12.501(R)|   -4.363(R)|clk_dcm           |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -69,23 +69,24 @@ Clock clk to Pad
                    | clk (edge) |                  | Clock  |
 Destination        |   to PAD   |Internal Clock(s) | Phase  |
 -------------------+------------+------------------+--------+
-done               |    4.776(R)|clk_dcm           |   0.000|
-output_value_re<0> |    5.890(R)|clk_dcm           |   0.000|
-output_value_re<1> |    6.561(R)|clk_dcm           |   0.000|
-output_value_re<2> |    7.012(R)|clk_dcm           |   0.000|
-output_value_re<3> |    7.469(R)|clk_dcm           |   0.000|
-output_value_re<4> |    7.243(R)|clk_dcm           |   0.000|
-output_value_re<5> |    6.414(R)|clk_dcm           |   0.000|
-output_value_re<6> |    6.907(R)|clk_dcm           |   0.000|
-output_value_re<7> |    7.131(R)|clk_dcm           |   0.000|
-output_value_re<8> |    5.362(R)|clk_dcm           |   0.000|
-output_value_re<9> |    7.820(R)|clk_dcm           |   0.000|
-output_value_re<10>|    5.937(R)|clk_dcm           |   0.000|
-output_value_re<11>|    7.300(R)|clk_dcm           |   0.000|
-output_value_re<12>|    5.365(R)|clk_dcm           |   0.000|
-output_value_re<13>|    5.474(R)|clk_dcm           |   0.000|
-output_value_re<14>|    5.460(R)|clk_dcm           |   0.000|
-output_value_re<15>|    6.164(R)|clk_dcm           |   0.000|
+detected           |    5.517(R)|clk_dcm           |   0.000|
+done               |    5.159(R)|clk_dcm           |   0.000|
+output_value_re<0> |   10.144(R)|clk_dcm           |   0.000|
+output_value_re<1> |    5.837(R)|clk_dcm           |   0.000|
+output_value_re<2> |    5.837(R)|clk_dcm           |   0.000|
+output_value_re<3> |    5.300(R)|clk_dcm           |   0.000|
+output_value_re<4> |    5.665(R)|clk_dcm           |   0.000|
+output_value_re<5> |    5.357(R)|clk_dcm           |   0.000|
+output_value_re<6> |    5.363(R)|clk_dcm           |   0.000|
+output_value_re<7> |    5.574(R)|clk_dcm           |   0.000|
+output_value_re<8> |    5.511(R)|clk_dcm           |   0.000|
+output_value_re<9> |    6.324(R)|clk_dcm           |   0.000|
+output_value_re<10>|    6.629(R)|clk_dcm           |   0.000|
+output_value_re<11>|    5.562(R)|clk_dcm           |   0.000|
+output_value_re<12>|    5.946(R)|clk_dcm           |   0.000|
+output_value_re<13>|    7.124(R)|clk_dcm           |   0.000|
+output_value_re<14>|    6.772(R)|clk_dcm           |   0.000|
+output_value_re<15>|    7.027(R)|clk_dcm           |   0.000|
 -------------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -93,11 +94,11 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   19.398|         |         |         |
+clk            |   19.628|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sat Jan 28 17:29:22 2017 
+Analysis completed Sat Jan 28 20:53:27 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:

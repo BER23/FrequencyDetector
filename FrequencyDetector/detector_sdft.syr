@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: detector_sdft.prj
 
@@ -82,7 +82,7 @@ Equivalent register Removal        : YES
 ---- General Options
 Optimization Goal                  : Speed
 Optimization Effort                : 1
-Keep Hierarchy                     : No
+Keep Hierarchy                     : Yes
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
 Global Optimization                : AllClockNets
@@ -114,14 +114,16 @@ Compiling vhdl file "C:/Users/User/Desktop/Politechnika/FrequencyDetector/Freque
 Entity <sdft> compiled.
 Entity <sdft> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/detector_sdft.vhd" in Library work.
-Architecture behavioral of Entity detector_sdft is up to date.
+Entity <detector_sdft> compiled.
+Entity <detector_sdft> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for entity <detector_sdft> in library <work> (architecture <behavioral>) with generics.
-	FS = 20000
+	FN = 20000
 	FX = 5000
+	threshold = "00000000000000001111111111111111"
 
 Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral>).
 
@@ -132,10 +134,11 @@ Analyzing hierarchy for entity <sdft> in library <work> (architecture <Behaviora
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing generic Entity <detector_sdft> in library <work> (Architecture <behavioral>).
-	FS = 20000
+	FN = 20000
 	FX = 5000
-WARNING:Xst:753 - "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/detector_sdft.vhd" line 37: Unconnected output port 'CLKFX_OUT' of component 'dcm'.
-WARNING:Xst:753 - "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/detector_sdft.vhd" line 37: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'dcm'.
+	threshold = "00000000000000001111111111111111"
+WARNING:Xst:753 - "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/detector_sdft.vhd" line 52: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'dcm'.
+WARNING:Xst:753 - "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/detector_sdft.vhd" line 52: Unconnected output port 'CLK0_OUT' of component 'dcm'.
 Entity <detector_sdft> analyzed. Unit <detector_sdft> generated.
 
 Analyzing Entity <dcm> in library <work> (Architecture <behavioral>).
@@ -144,8 +147,8 @@ Analyzing Entity <dcm> in library <work> (Architecture <behavioral>).
     Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <dcm>.
     Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <dcm>.
     Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <dcm>.
-    Set user-defined property "CLKFX_DIVIDE =  5" for instance <DCM_SP_INST> in unit <dcm>.
-    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLKFX_DIVIDE =  4" for instance <DCM_SP_INST> in unit <dcm>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <DCM_SP_INST> in unit <dcm>.
     Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <dcm>.
     Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_SP_INST> in unit <dcm>.
     Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <dcm>.
@@ -161,8 +164,6 @@ Analyzing Entity <dcm> in library <work> (Architecture <behavioral>).
 Entity <dcm> analyzed. Unit <dcm> generated.
 
 Analyzing Entity <sdft> in library <work> (Architecture <Behavioral>).
-WARNING:Xst:790 - "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd" line 32: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/sdft.vhd" line 32: Index value(s) does not match array range, simulation mismatch.
 Entity <sdft> analyzed. Unit <sdft> generated.
 
 
@@ -208,8 +209,18 @@ Unit <dcm> synthesized.
 
 Synthesizing Unit <detector_sdft>.
     Related source file is "C:/Users/User/Desktop/Politechnika/FrequencyDetector/FrequencyDetector/detector_sdft.vhd".
-WARNING:Xst:646 - Signal <output_value_im> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <line_to_find> is used but never assigned. This sourceless signal will be automatically connected to value 10110100.
+WARNING:Xst:653 - Signal <line_to_find> is used but never assigned. This sourceless signal will be automatically connected to value 10000000.
+WARNING:Xst:1780 - Signal <amp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <detected>.
+    Found 32-bit adder for signal <amp0$add0000> created at line 23.
+    Found 16x16-bit multiplier for signal <amp0$mult0000> created at line 23.
+    Found 16x16-bit multiplier for signal <amp0$mult0001> created at line 23.
+    Found 32-bit comparator less for signal <detected$cmp_lt0000> created at line 83.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred   1 Comparator(s).
 Unit <detector_sdft> synthesized.
 
 
@@ -219,17 +230,20 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  256x64-bit ROM                                        : 1
-# Multipliers                                          : 4
+# Multipliers                                          : 6
+ 16x16-bit multiplier                                  : 2
  32x32-bit multiplier                                  : 4
-# Adders/Subtractors                                   : 4
- 32-bit adder                                          : 2
+# Adders/Subtractors                                   : 5
+ 32-bit adder                                          : 3
  64-bit adder                                          : 1
  64-bit subtractor                                     : 1
 # Counters                                             : 1
  9-bit up counter                                      : 1
-# Registers                                            : 5
- 1-bit register                                        : 1
+# Registers                                            : 6
+ 1-bit register                                        : 2
  32-bit register                                       : 4
+# Comparators                                          : 1
+ 32-bit comparator less                                : 1
 
 =========================================================================
 
@@ -265,16 +279,19 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  256x64-bit ROM                                        : 1
-# Multipliers                                          : 4
+# Multipliers                                          : 6
+ 16x16-bit multiplier                                  : 2
  32x32-bit registered multiplier                       : 4
-# Adders/Subtractors                                   : 4
- 32-bit adder                                          : 2
+# Adders/Subtractors                                   : 5
+ 32-bit adder                                          : 3
  48-bit adder                                          : 1
  48-bit subtractor                                     : 1
 # Counters                                             : 1
  9-bit up counter                                      : 1
-# Registers                                            : 65
- Flip-Flops                                            : 65
+# Registers                                            : 66
+ Flip-Flops                                            : 66
+# Comparators                                          : 1
+ 32-bit comparator less                                : 1
 
 =========================================================================
 
@@ -286,6 +303,8 @@ Optimizing unit <detector_sdft> ...
 
 Optimizing unit <sdft> ...
 
+Optimizing unit <dcm1> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block detector_sdft, actual ratio is 5.
@@ -296,8 +315,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 74
- Flip-Flops                                            : 74
+# Registers                                            : 75
+ Flip-Flops                                            : 75
 
 =========================================================================
 
@@ -320,36 +339,36 @@ RTL Top Level Output File Name     : detector_sdft.ngr
 Top Level Output File Name         : detector_sdft
 Output Format                      : NGC
 Optimization Goal                  : Speed
-Keep Hierarchy                     : No
+Keep Hierarchy                     : Yes
 
 Design Statistics
-# IOs                              : 36
+# IOs                              : 37
 
 Cell Usage :
-# BELS                             : 1234
-#      GND                         : 1
-#      INV                         : 1
+# BELS                             : 1351
+#      GND                         : 3
+#      INV                         : 2
 #      LUT1                        : 8
-#      LUT2                        : 416
-#      LUT3                        : 2
-#      LUT4                        : 2
-#      MUXCY                       : 409
-#      MUXF5                       : 1
-#      VCC                         : 1
-#      XORCY                       : 393
-# FlipFlops/Latches                : 74
+#      LUT2                        : 450
+#      LUT3                        : 3
+#      LUT4                        : 9
+#      MUXCY                       : 449
+#      VCC                         : 2
+#      XORCY                       : 425
+# FlipFlops/Latches                : 75
 #      FDE                         : 64
-#      FDR                         : 10
+#      FDR                         : 11
 # Clock Buffers                    : 3
-#      BUFG                        : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
 # IO Buffers                       : 36
-#      IBUF                        : 17
+#      IBUF                        : 16
 #      IBUFG                       : 1
-#      OBUF                        : 18
+#      OBUF                        : 19
 # DCMs                             : 1
 #      DCM_SP                      : 1
-# MULTs                            : 16
-#      MULT18X18SIO                : 16
+# MULTs                            : 18
+#      MULT18X18SIO                : 18
 =========================================================================
 
 Device utilization summary:
@@ -357,12 +376,12 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      233  out of   4656     5%  
- Number of Slice Flip Flops:             74  out of   9312     0%  
- Number of 4 input LUTs:                429  out of   9312     4%  
- Number of IOs:                          36
+ Number of Slices:                      247  out of   4656     5%  
+ Number of Slice Flip Flops:             75  out of   9312     0%  
+ Number of 4 input LUTs:                472  out of   9312     5%  
+ Number of IOs:                          37
  Number of bonded IOBs:                  36  out of    232    15%  
- Number of MULT18X18SIOs:                16  out of     20    80%  
+ Number of MULT18X18SIOs:                18  out of     20    90%  
  Number of GCLKs:                         3  out of     24    12%  
  Number of DCMs:                          1  out of      4    25%  
 
@@ -384,12 +403,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+--------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)    | Load  |
------------------------------------+--------------------------+-------+
-clk                                | Inst_dcm/DCM_SP_INST:CLK0| 74    |
-enable                             | IBUF+BUFG                | 16    |
------------------------------------+--------------------------+-------+
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | DCM_SP_INST:CLKFX      | 75    |
+enable                             | BUFGP                  | 16    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -399,9 +418,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 17.733ns (Maximum Frequency: 56.392MHz)
-   Minimum input arrival time before clock: 4.961ns
-   Maximum output required time after clock: 4.683ns
+   Minimum period: 8.936ns (Maximum Frequency: 111.901MHz)
+   Minimum input arrival time before clock: 5.205ns
+   Maximum output required time after clock: 4.880ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -410,114 +429,116 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 17.733ns (frequency: 56.392MHz)
-  Total number of paths / destination ports: 28677911 / 83
+  Clock period: 8.936ns (frequency: 111.901MHz)
+  Total number of paths / destination ports: 28709610 / 84
 -------------------------------------------------------------------------
-Delay:               17.733ns (Levels of Logic = 39)
-  Source:            sdft/s1.im_12 (FF)
+Delay:               17.873ns (Levels of Logic = 39)
+  Source:            sdft/s1.im_16 (FF)
   Destination:       sdft/s1.re_31 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
+  Source Clock:      clk rising 0.5X
+  Destination Clock: clk rising 0.5X
 
-  Data Path: sdft/s1.im_12 to sdft/s1.re_31
+  Data Path: sdft/s1.im_16 to sdft/s1.re_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              2   0.591   0.447  sdft/s1.im_12 (sdft/s1.im_12)
-     MULT18X18SIO:B12->P17    1   4.873   0.499  sdft/Mmult_re64_mult0001_submult_0 (sdft/Mmult_re64_mult0001_submult_0_P_to_Adder_A_17)
-     LUT2:I1->O            1   0.704   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_lut<17> (sdft/Mmult_re64_mult0001_submult_00_Madd_lut<17>)
-     MUXCY:S->O            1   0.464   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<17> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<17>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<18> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<18>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<19> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<19>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<20> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<20>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<21> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<21>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<22> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<22>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<23> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<23>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<24> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<24>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<25> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<25>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<26> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<26>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<27> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<27>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<28> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<28>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<29> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<29>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<30> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<30>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<31> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<31>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<32> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<32>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<33> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<33>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<34> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<34>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<35> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<35>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<36> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<36>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<37> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<37>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<38> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<38>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<39> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<39>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<40> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<40>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<41> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<41>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<42> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<42>)
-     MUXCY:CI->O           1   0.059   0.000  sdft/Mmult_re64_mult0001_submult_00_Madd_cy<43> (sdft/Mmult_re64_mult0001_submult_00_Madd_cy<43>)
-     XORCY:CI->O           1   0.804   0.499  sdft/Mmult_re64_mult0001_submult_00_Madd_xor<44> (sdft/Mmult_re64_mult0001_submult_0_44)
-     LUT2:I1->O            1   0.704   0.000  sdft/Mmult_re64_mult00010_Madd_lut<44> (sdft/Mmult_re64_mult00010_Madd_lut<44>)
-     MUXCY:S->O            1   0.464   0.000  sdft/Mmult_re64_mult00010_Madd_cy<44> (sdft/Mmult_re64_mult00010_Madd_cy<44>)
-     XORCY:CI->O           1   0.804   0.595  sdft/Mmult_re64_mult00010_Madd_xor<45> (sdft/re64_mult0001<45>)
-     LUT2:I0->O            1   0.704   0.000  sdft/Msub_re64_sub0000_Madd_lut<45> (sdft/Msub_re64_sub0000_Madd_lut<45>)
-     MUXCY:S->O            1   0.464   0.000  sdft/Msub_re64_sub0000_Madd_cy<45> (sdft/Msub_re64_sub0000_Madd_cy<45>)
-     XORCY:CI->O           1   0.804   0.499  sdft/Msub_re64_sub0000_Madd_xor<46> (sdft/re64_sub0000<46>)
-     LUT2:I1->O            1   0.704   0.000  sdft/Madd_s1.re_add0000_lut<30> (sdft/Madd_s1.re_add0000_lut<30>)
-     MUXCY:S->O            0   0.464   0.000  sdft/Madd_s1.re_add0000_cy<30> (sdft/Madd_s1.re_add0000_cy<30>)
-     XORCY:CI->O           1   0.804   0.000  sdft/Madd_s1.re_add0000_xor<31> (sdft/s1_re_add0000<31>)
-     FDE:D                     0.308          sdft/s1.re_31
+     FDE:C->Q              4   0.591   0.587  s1.im_16 (s1.im_16)
+     MULT18X18SIO:B16->P17    1   4.873   0.499  Mmult_re64_mult0001_submult_0 (Mmult_re64_mult0001_submult_0_P_to_Adder_A_17)
+     LUT2:I1->O            1   0.704   0.000  Mmult_re64_mult0001_submult_00_Madd_lut<17> (Mmult_re64_mult0001_submult_00_Madd_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<17> (Mmult_re64_mult0001_submult_00_Madd_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<18> (Mmult_re64_mult0001_submult_00_Madd_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<19> (Mmult_re64_mult0001_submult_00_Madd_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<20> (Mmult_re64_mult0001_submult_00_Madd_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<21> (Mmult_re64_mult0001_submult_00_Madd_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<22> (Mmult_re64_mult0001_submult_00_Madd_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<23> (Mmult_re64_mult0001_submult_00_Madd_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<24> (Mmult_re64_mult0001_submult_00_Madd_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<25> (Mmult_re64_mult0001_submult_00_Madd_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<26> (Mmult_re64_mult0001_submult_00_Madd_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<27> (Mmult_re64_mult0001_submult_00_Madd_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<28> (Mmult_re64_mult0001_submult_00_Madd_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<29> (Mmult_re64_mult0001_submult_00_Madd_cy<29>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<30> (Mmult_re64_mult0001_submult_00_Madd_cy<30>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<31> (Mmult_re64_mult0001_submult_00_Madd_cy<31>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<32> (Mmult_re64_mult0001_submult_00_Madd_cy<32>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<33> (Mmult_re64_mult0001_submult_00_Madd_cy<33>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<34> (Mmult_re64_mult0001_submult_00_Madd_cy<34>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<35> (Mmult_re64_mult0001_submult_00_Madd_cy<35>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<36> (Mmult_re64_mult0001_submult_00_Madd_cy<36>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<37> (Mmult_re64_mult0001_submult_00_Madd_cy<37>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<38> (Mmult_re64_mult0001_submult_00_Madd_cy<38>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<39> (Mmult_re64_mult0001_submult_00_Madd_cy<39>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<40> (Mmult_re64_mult0001_submult_00_Madd_cy<40>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<41> (Mmult_re64_mult0001_submult_00_Madd_cy<41>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<42> (Mmult_re64_mult0001_submult_00_Madd_cy<42>)
+     MUXCY:CI->O           1   0.059   0.000  Mmult_re64_mult0001_submult_00_Madd_cy<43> (Mmult_re64_mult0001_submult_00_Madd_cy<43>)
+     XORCY:CI->O           1   0.804   0.499  Mmult_re64_mult0001_submult_00_Madd_xor<44> (Mmult_re64_mult0001_submult_0_44)
+     LUT2:I1->O            1   0.704   0.000  Mmult_re64_mult00010_Madd_lut<44> (Mmult_re64_mult00010_Madd_lut<44>)
+     MUXCY:S->O            1   0.464   0.000  Mmult_re64_mult00010_Madd_cy<44> (Mmult_re64_mult00010_Madd_cy<44>)
+     XORCY:CI->O           1   0.804   0.595  Mmult_re64_mult00010_Madd_xor<45> (re64_mult0001<45>)
+     LUT2:I0->O            1   0.704   0.000  Msub_re64_sub0000_Madd_lut<45> (Msub_re64_sub0000_Madd_lut<45>)
+     MUXCY:S->O            1   0.464   0.000  Msub_re64_sub0000_Madd_cy<45> (Msub_re64_sub0000_Madd_cy<45>)
+     XORCY:CI->O           1   0.804   0.499  Msub_re64_sub0000_Madd_xor<46> (re64_sub0000<46>)
+     LUT2:I1->O            1   0.704   0.000  Madd_s1.re_add0000_lut<30> (Madd_s1.re_add0000_lut<30>)
+     MUXCY:S->O            0   0.464   0.000  Madd_s1.re_add0000_cy<30> (Madd_s1.re_add0000_cy<30>)
+     XORCY:CI->O           1   0.804   0.000  Madd_s1.re_add0000_xor<31> (s1_re_add0000<31>)
+     FDE:D                     0.308          s1.re_31
     ----------------------------------------
-    Total                     17.733ns (15.194ns logic, 2.539ns route)
-                                       (85.7% logic, 14.3% route)
+    Total                     17.873ns (15.194ns logic, 2.679ns route)
+                                       (85.0% logic, 15.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 330 / 90
 -------------------------------------------------------------------------
-Offset:              4.961ns (Levels of Logic = 2)
+Offset:              5.205ns (Levels of Logic = 3)
   Source:            enable (PAD)
-  Destination:       sdft/counter_8 (FF)
-  Destination Clock: clk rising
+  Destination:       sdft/counter_0 (FF)
+  Destination Clock: clk rising 0.5X
 
-  Data Path: enable to sdft/counter_8
+  Data Path: enable to sdft/counter_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            67   1.218   1.308  enable_IBUF (enable_IBUF1)
-     LUT3:I2->O            9   0.704   0.820  sdft/counter_or00001 (sdft/counter_or0000)
-     FDR:R                     0.911          sdft/counter_0
+     BUFGP:I->O           82   1.457   1.313  enable_BUFGP (enable_BUFGP)
+     begin scope: 'sdft'
+     LUT3:I2->O            9   0.704   0.820  counter_or00001 (counter_or0000)
+     FDR:R                     0.911          counter_0
     ----------------------------------------
-    Total                      4.961ns (2.833ns logic, 2.128ns route)
-                                       (57.1% logic, 42.9% route)
+    Total                      5.205ns (3.072ns logic, 2.133ns route)
+                                       (59.0% logic, 41.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 17 / 17
+  Total number of paths / destination ports: 18 / 18
 -------------------------------------------------------------------------
-Offset:              4.683ns (Levels of Logic = 1)
+Offset:              4.880ns (Levels of Logic = 2)
   Source:            sdft/s1.re_31 (FF)
   Destination:       output_value_re<15> (PAD)
-  Source Clock:      clk rising
+  Source Clock:      clk rising 0.5X
 
   Data Path: sdft/s1.re_31 to output_value_re<15>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              9   0.591   0.820  sdft/s1.re_31 (sdft/s1.re_31)
+     FDE:C->Q             15   0.591   1.017  s1.re_31 (s1.re_31)
+     end scope: 'sdft'
      OBUF:I->O                 3.272          output_value_re_15_OBUF (output_value_re<15>)
     ----------------------------------------
-    Total                      4.683ns (3.863ns logic, 0.820ns route)
-                                       (82.5% logic, 17.5% route)
+    Total                      4.880ns (3.863ns logic, 1.017ns route)
+                                       (79.2% logic, 20.8% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.16 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.46 secs
  
 --> 
 
-Total memory usage is 283628 kilobytes
+Total memory usage is 300884 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
 Number of infos    :    4 (   0 filtered)
 

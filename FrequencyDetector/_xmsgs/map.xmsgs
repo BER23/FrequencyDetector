@@ -11,5 +11,16 @@
 <msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
+<msg type="warning" file="LIT" num="175" delta="old" >Clock buffer is designated to drive clock loads. <arg fmt="%s" index="1">BUFGMUX symbol &quot;physical_group_enable_BUFGP/enable_BUFGP/BUFG&quot; (output signal=enable_BUFGP)</arg> has a mix of clock and non-clock loads. Some of the non-clock loads are (maximum of 5 listed):
+<arg fmt="%s" index="2">Pin CE of sdft/s1.re_0
+Pin CE of sdft/s1.re_1
+Pin CE of sdft/s1.re_2
+Pin CE of sdft/s1.re_3
+Pin CE of sdft/s1.re_4</arg>
+</msg>
+
+<msg type="info" file="PhysDesignRules" num="772" delta="old" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">Inst_dcm/DCM_SP_INST</arg>, consult the device Interactive Data Sheet.
+</msg>
+
 </messages>
 

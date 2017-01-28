@@ -1,6 +1,7 @@
 NET "start"  LOC = "L13";
 NET "clk" LOC = "C9";
 NET "done" LOC = "F12";
+NET "detected" LOC = "E11";
 NET "locked_out" LOC = "E12";
 NET "data<0>" LOC = "B4";
 NET "data<1>" LOC = "A4";

@@ -5,6 +5,27 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="NetListWriters" num="306" delta="old" >Signal bus <arg fmt="%s" index="1">Madd_im64_add0000_Madd_cy</arg><arg fmt="%s" index="2">( 46 downto 0 )</arg> on block <arg fmt="%s" index="3">sdft</arg> is not reconstructed, because there are some missing bus signals.
+</msg>
+
+<msg type="warning" file="NetListWriters" num="306" delta="old" >Signal bus <arg fmt="%s" index="1">Madd_s1.re_add0000_cy</arg><arg fmt="%s" index="2">( 30 downto 16 )</arg> on block <arg fmt="%s" index="3">sdft</arg> is not reconstructed, because there are some missing bus signals.
+</msg>
+
+<msg type="warning" file="NetListWriters" num="306" delta="old" >Signal bus <arg fmt="%s" index="1">Mmult_re64_mult0000_submult_10_Madd_cy</arg><arg fmt="%s" index="2">( 29 downto 17 )</arg> on block <arg fmt="%s" index="3">sdft</arg> is not reconstructed, because there are some missing bus signals.
+</msg>
+
+<msg type="warning" file="NetListWriters" num="306" delta="old" >Signal bus <arg fmt="%s" index="1">Mmult_im64_mult0000_submult_10_Madd_cy</arg><arg fmt="%s" index="2">( 29 downto 17 )</arg> on block <arg fmt="%s" index="3">sdft</arg> is not reconstructed, because there are some missing bus signals.
+</msg>
+
+<msg type="warning" file="NetListWriters" num="306" delta="old" >Signal bus <arg fmt="%s" index="1">Msub_re64_sub0000_Madd_cy</arg><arg fmt="%s" index="2">( 46 downto 0 )</arg> on block <arg fmt="%s" index="3">sdft</arg> is not reconstructed, because there are some missing bus signals.
+</msg>
+
+<msg type="warning" file="NetListWriters" num="306" delta="old" >Signal bus <arg fmt="%s" index="1">Mmult_re64_mult0001_submult_10_Madd_cy</arg><arg fmt="%s" index="2">( 29 downto 17 )</arg> on block <arg fmt="%s" index="3">sdft</arg> is not reconstructed, because there are some missing bus signals.
+</msg>
+
+<msg type="warning" file="NetListWriters" num="306" delta="old" >Signal bus <arg fmt="%s" index="1">Mmult_im64_mult0001_submult_10_Madd_cy</arg><arg fmt="%s" index="2">( 29 downto 17 )</arg> on block <arg fmt="%s" index="3">sdft</arg> is not reconstructed, because there are some missing bus signals.
+</msg>
+
 <msg type="info" file="NetListWriters" num="635" delta="old" >The generated VHDL netlist contains Xilinx <arg fmt="%s" index="1">SIMPRIM</arg> simulation primitives and has to be used with <arg fmt="%s" index="2">SIMPRIM</arg> library for correct compilation and simulation. 
 </msg>
 

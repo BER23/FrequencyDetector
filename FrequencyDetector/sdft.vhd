@@ -9,7 +9,7 @@ entity sdft is
     Port ( clk : in  STD_LOGIC;
 			  enable : in  STD_LOGIC;
            data : in  STD_LOGIC_VECTOR (15 downto 0);
-			  line_to_find : in STD_LOGIC_VECTOR (7 downto 0);
+			  line_to_find : integer range 0 to 255;
 			  done : out STD_LOGIC;
            output_value_re : out  STD_LOGIC_VECTOR (15 downto 0);
 			  output_value_im : out  STD_LOGIC_VECTOR (15 downto 0));
@@ -29,7 +29,7 @@ begin
 calculate_coef: process(enable)
 begin
 if enable'event and enable='1' then
-	coef <= (signed(re_lut(to_integer(unsigned(line_to_find)))),signed(im_lut(to_integer(unsigned(line_to_find)))));
+	coef <= (signed(re_lut(line_to_find)),signed(im_lut(line_to_find)));
 end if;
 end process;
 
