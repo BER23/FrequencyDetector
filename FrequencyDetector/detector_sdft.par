@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-ZNAK-LAPTOP::  Sat Jan 28 20:52:09 2017
+ZNAK-LAPTOP::  Sat Jan 28 21:38:53 2017
 
 par -w -intstyle ise -ol high -t 1 detector_sdft_map.ncd detector_sdft.ncd
 detector_sdft.pcf 
@@ -94,7 +94,7 @@ Phase 9.8  Global Placement
 Phase 9.8  Global Placement (Checksum:c405ca5e) REAL time: 3 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:c405ca5e) REAL time: 4 secs 
+Phase 10.5  Local Placement Optimization (Checksum:c405ca5e) REAL time: 3 secs 
 
 Phase 11.18  Placement Optimization
 Phase 11.18  Placement Optimization (Checksum:ab36df71) REAL time: 4 secs 
@@ -117,9 +117,9 @@ Phase  2  : 1584 unrouted;      REAL time: 7 secs
 
 Phase  3  : 535 unrouted;      REAL time: 8 secs 
 
-Phase  4  : 704 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
+Phase  4  : 704 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 18 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
 
 Updating file: detector_sdft.ncd with current fully routed design.
 
@@ -129,9 +129,9 @@ Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 1
 
 Updating file: detector_sdft.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 11 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 10 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 11 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 10 secs 
 
 Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 13 secs 
 

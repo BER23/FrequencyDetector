@@ -9,28 +9,27 @@ end entity detector_sdft_tb;
 
 architecture behav of detector_sdft_tb is
     
-type bits_array is array (0 to 511) of std_logic_vector(15 downto 0);
+	type bits_array is array (0 to 511) of std_logic_vector(15 downto 0);
 
-signal clk : std_logic := '1';
-signal enable : std_logic := '0';
-signal detected : std_logic;
-signal done : std_logic;
-signal data : std_logic_vector(15 downto 0) := (others => '0');
-signal locked_out : std_logic;
-signal output_value_re : std_logic_vector(15 downto 0);
-signal clk_read : std_logic := '1';
+	signal clk : std_logic := '1';
+	signal enable : std_logic := '0';
+	signal detected : std_logic;
+	signal done : std_logic;
+	signal data : std_logic_vector(15 downto 0) := (others => '0');
+	signal locked_out : std_logic;
+	signal output_value_re : std_logic_vector(15 downto 0);
+	signal clk_read : std_logic := '1';
 
 begin
-	UUT : entity work.detector_sdft
-	  PORT MAP (
+	uut : entity work.detector_sdft
+	  port map (
 		clk => clk,
 		enable => enable,
 		data => data,
 		detected => detected,
 		done => done,
 		locked_out => locked_out,
-		output_value_re => output_value_re
-	  );
+		output_value_re => output_value_re);
 	
 	clk_process: process
   	begin
